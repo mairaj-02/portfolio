@@ -617,6 +617,7 @@ export default function Home() {
 
                 {[
                   {
+
                     company: "HYR",
                     role: "Software and Design Intern",
                     period: "July 2025 - Aug 2025",
