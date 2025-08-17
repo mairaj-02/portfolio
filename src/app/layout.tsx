@@ -16,8 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mairaj's Portfolio",
   description:
-    "Modern Next.js scaffold built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "React"],
+    "Mairaj's web portfolio showcasing his skills, projects, and experience as an Electrical Engineer.",
   authors: [{ name: "Mairaj" }],
 };
 
