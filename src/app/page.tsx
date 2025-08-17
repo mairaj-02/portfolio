@@ -101,7 +101,7 @@ export default function Home() {
         {/* Navigation */}
         <nav className="fixed top-0 w-full nav-tech-bg-enhanced z-50">
           <div className="nav-icon-bg-enhanced"></div>
-          <div className="container mx-auto px-4 py-6 relative z-10">
+          <div className="container mx-auto px-4 py-3 relative z-10">
             <div className="flex justify-between items-center">
               <div className="flex items-center space-x-4">
                 <div className="relative">
@@ -110,10 +110,10 @@ export default function Home() {
                   <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full opacity-30 animate-spin-super-slow"></div>
                 </div>
                 <div>
-                  <span className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-orange-400 to-blue-400 bg-clip-text text-transparent text-glitch-enhanced animate-pulse-glow">
+                  <span className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-orange-400 to-blue-400 bg-clip-text text-transparent animate-pulse-glow">
                     Mairaj's Portfolio
                   </span>
-                  <div className="text-sm md:text-base text-blue-400 font-bold tracking-widest text-decrypt-enhanced animate-glow">
+                  <div className="text-sm md:text-base text-blue-400 font-bold tracking-widest animate-glow">
                     ⚡ ELECTRICAL ENGINEER ⚡
                   </div>
                 </div>
@@ -193,7 +193,7 @@ export default function Home() {
         {/* Hero Section */}
         <section
           id="home"
-          className="min-h-screen flex items-center justify-center relative pt-20"
+          className="min-h-screen flex items-center justify-center relative pt-12"
         >
           <div className="container mx-auto px-4 text-center">
             <div
@@ -214,15 +214,15 @@ export default function Home() {
                 </div>
               </div>
 
-              <h1 className="text-6xl md:text-7xl lg:text-9xl font-black mb-8 md:mb-10 bg-gradient-to-r from-blue-400 via-orange-400 to-blue-400 bg-clip-text text-transparent animate-gradient text-glitch-enhanced">
+              <h1 className="text-5xl md:text-6xl lg:text-8xl font-black mb-8 md:mb-10 bg-gradient-to-r from-blue-400 via-orange-400 to-blue-400 bg-clip-text text-transparent">
                 MUHAMMAD MAIRAJ
               </h1>
 
-              <div className="text-3xl md:text-4xl lg:text-5xl mb-10 md:mb-14 text-gray-300 text-rotate font-bold">
+              <div className="text-3xl md:text-4xl lg:text-5xl mb-10 md:mb-14 text-gray-300 font-bold">
                 <span className="inline-block animate-pulse text-2xl md:text-3xl">
                   ⚡
                 </span>
-                <span className="mx-6 font-black text-blue-400 text-glitch">
+                <span className="mx-6 font-black text-blue-400">
                   ELECTRICAL ENGINEER
                 </span>
                 <span className="inline-block animate-pulse text-2xl md:text-3xl">
@@ -230,16 +230,11 @@ export default function Home() {
                 </span>
               </div>
 
-              <p className="text-2xl md:text-3xl lg:text-4xl mb-14 md:mb-18 max-w-5xl mx-auto text-gray-300 leading-relaxed px-4 text-decrypt-enhanced font-black">
+              <p className="text-2xl md:text-3xl lg:text-4xl mb-14 md:mb-18 max-w-5xl mx-auto text-gray-300 leading-relaxed px-4 font-black">
                 Innovating at the intersection of{" "}
-                <span className="text-blue-400 text-glitch-enhanced">AI</span>,{" "}
-                <span className="text-orange-400 text-glitch-enhanced">
-                  Data Analysis
-                </span>
-                , and{" "}
-                <span className="text-blue-400 text-glitch-enhanced">
-                  Electrical Systems
-                </span>
+                <span className="text-blue-400">AI</span>,{" "}
+                <span className="text-orange-400">Data Analysis</span>, and{" "}
+                <span className="text-blue-400">Electrical Systems</span>
               </p>
 
               <div className="flex flex-col sm:flex-row gap-8 justify-center mb-14 md:mb-18 px-4">
@@ -259,58 +254,6 @@ export default function Home() {
                   <div className="absolute inset-0 bg-blue-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                 </Button>
               </div>
-
-              {/* Emphasized Top Skills */}
-              <div className="text-center mb-14 md:mb-18">
-                <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
-                  {[
-                    {
-                      skill: "CODING",
-                      icon: <Code className="h-12 w-12 md:h-16 md:w-16" />,
-                      color: "blue",
-                    },
-                    {
-                      skill: "MATHEMATICS",
-                      icon: (
-                        <Calculator className="h-12 w-12 md:h-16 md:w-16" />
-                      ),
-                      color: "orange",
-                    },
-                    {
-                      skill: "PROBLEM SOLVING",
-                      icon: <Puzzle className="h-12 w-12 md:h-16 md:w-16" />,
-                      color: "blue",
-                    },
-                  ].map((item, index) => (
-                    <div
-                      key={item.skill}
-                      className="flex flex-col items-center space-y-3 group"
-                    >
-                      <div
-                        className={`relative transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-6`}
-                      >
-                        <div
-                          className={`absolute inset-0 bg-${item.color}-400 rounded-full blur-xl opacity-60 animate-ping-slow`}
-                        ></div>
-                        <div
-                          className={`relative bg-gradient-to-br from-${item.color}-600 to-orange-500 p-3 md:p-4 rounded-full`}
-                        >
-                          <div className="bg-gray-900 p-2 md:p-3 rounded-full">
-                            <div className={`text-${item.color}-400`}>
-                              {item.icon}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <Badge
-                        className={`skill-tag-enhanced text-decrypt-enhanced text-xl md:text-2xl font-black py-4 px-8 animate-pulse-glow bg-gradient-to-r from-${item.color}-500/20 to-orange-500/20 border-${item.color}-400`}
-                      >
-                        {item.skill}
-                      </Badge>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
 
             <div className="animate-bounce mt-8 md:mt-16">
@@ -324,7 +267,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             {/* Technical Expertise */}
             <div className="text-center mb-16">
-              <h3 className="text-4xl md:text-5xl font-black mb-8 bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent text-rotate">
+              <h3 className="text-4xl md:text-5xl font-black mb-8 bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
                 TECHNICAL EXPERTISE
               </h3>
             </div>
@@ -441,7 +384,7 @@ export default function Home() {
                       <div className="p-4 bg-gradient-to-br from-blue-600/20 to-orange-600/20 rounded-full">
                         {skill.icon}
                       </div>
-                      <CardTitle className="text-2xl md:text-3xl font-black text-white text-glitch-enhanced">
+                      <CardTitle className="text-2xl md:text-3xl font-black text-white">
                         {skill.title}
                       </CardTitle>
                     </div>
@@ -458,379 +401,198 @@ export default function Home() {
                           </span>
                         ))}
                       </div>
-                      <div className="mt-8">
-                        <div className="flex justify-between text-lg font-black text-gray-400 mb-4">
-                          <span>MASTERY LEVEL</span>
-                          <span className="text-xl font-bold text-blue-400">
-                            {skill.level}%
-                          </span>
-                        </div>
-                        <div className="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
-                          <div
-                            className="bg-gradient-to-r from-blue-500 to-orange-500 h-4 rounded-full transition-all duration-2000 ease-out shadow-lg"
-                            style={{ width: `${skill.level}%` }}
-                          ></div>
-                        </div>
-                      </div>
                     </div>
                   </CardContent>
                 </Card>
               ))}
             </div>
 
-            {/* Soft Skills Section */}
+            {/* Soft Skills & Languages Section */}
             <div className="text-center mb-16 mt-20">
-              <h3 className="text-4xl md:text-5xl font-black mb-8 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent text-rotate">
-                SOFT SKILLS
+              <h3 className="text-4xl md:text-5xl font-black mb-8 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                SKILLS & LANGUAGES
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-20">
-              {[
-                {
-                  title: "Communication",
-                  icon: (
-                    <MessageCircle className="h-16 w-16 text-green-400 skill-icon-enhanced animate-pulse-glow" />
-                  ),
-                  skills: [
-                    "Public Speaking",
-                    "Technical Writing",
-                    "Team Collaboration",
-                    "Client Presentations",
-                    "Documentation",
-                  ],
-                  level: 92,
-                },
-                {
-                  title: "Leadership",
-                  icon: (
-                    <Award className="h-16 w-16 text-blue-400 skill-icon-enhanced animate-pulse-slow" />
-                  ),
-                  skills: [
-                    "Team Management",
-                    "Project Coordination",
-                    "Mentoring",
-                    "Decision Making",
-                    "Strategic Planning",
-                  ],
-                  level: 88,
-                },
-                {
-                  title: "Problem Solving",
-                  icon: (
-                    <Puzzle className="h-16 w-16 text-orange-400 skill-icon-enhanced animate-float" />
-                  ),
-                  skills: [
-                    "Critical Thinking",
-                    "Creative Solutions",
-                    "Analytical Reasoning",
-                    "Troubleshooting",
-                    "Innovation",
-                  ],
-                  level: 95,
-                },
-              ].map((skill, index) => (
-                <Card
-                  key={skill.title}
-                  className={`skill-card-enhanced scroll-animate ${
-                    index % 2 === 0
-                      ? "scroll-animate-left"
-                      : "scroll-animate-right"
-                  }`}
-                >
-                  <CardHeader>
-                    <div className="flex flex-col items-center space-y-4 text-center">
-                      <div className="p-4 bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-full">
-                        {skill.icon}
-                      </div>
-                      <CardTitle className="text-2xl md:text-3xl font-black text-white text-glitch-enhanced">
-                        {skill.title}
-                      </CardTitle>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-20">
+              {/* Soft Skills Card */}
+              <Card className="skill-card-enhanced scroll-animate scroll-animate-left">
+                <CardHeader>
+                  <div className="flex flex-col items-center space-y-4 text-center">
+                    <div className="p-4 bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-full">
+                      <MessageCircle className="h-16 w-16 text-green-400 skill-icon-enhanced animate-pulse-glow" />
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-6">
-                      <div className="flex flex-wrap justify-center gap-3">
-                        {skill.skills.map((s) => (
-                          <span
-                            key={s}
-                            className="skill-tag-enhanced text-lg font-bold py-3 px-5 text-center min-w-[120px] shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-green-500/20 to-blue-500/20 border-green-400"
-                          >
-                            {s}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="mt-8">
-                        <div className="flex justify-between text-lg font-black text-gray-400 mb-4">
-                          <span>PROFICIENCY</span>
-                          <span className="text-xl font-bold text-green-400">
-                            {skill.level}%
+                    <CardTitle className="text-2xl md:text-3xl font-black text-white">
+                      SOFT SKILLS
+                    </CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-6">
+                    <div className="grid grid-cols-1 gap-4">
+                      {[
+                        "Problem Solving",
+                        "Team Leadership",
+                        "Communication",
+                        "Project Management",
+                        "Critical Thinking",
+                        "Time Management",
+                      ].map((skill, index) => (
+                        <div
+                          key={skill}
+                          className="flex justify-center items-center p-3 bg-gray-800/50 rounded-lg"
+                        >
+                          <span className="text-lg font-bold text-gray-300">
+                            {skill}
                           </span>
                         </div>
-                        <div className="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
-                          <div
-                            className="bg-gradient-to-r from-green-500 to-blue-500 h-4 rounded-full transition-all duration-2000 ease-out shadow-lg"
-                            style={{ width: `${skill.level}%` }}
-                          ></div>
-                        </div>
-                      </div>
+                      ))}
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-            {/* Languages Section */}
-            <div className="text-center mb-16">
-              <h3 className="text-4xl md:text-5xl font-black mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent text-rotate">
-                LANGUAGES
-              </h3>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {[
-                {
-                  title: "English",
-                  icon: (
-                    <div className="relative">
-                      <svg
-                        className="h-16 w-16 text-purple-400 skill-icon-enhanced animate-pulse-slow"
-                        viewBox="0 0 64 64"
-                        fill="none"
-                      >
-                        {/* English Dialog Bubble */}
-                        <path
-                          d="M16 12C16 8.68629 18.6863 6 22 6H42C45.3137 6 48 8.68629 48 12V40C48 43.3137 45.3137 46 42 46H28L20 54V46H22C18.6863 46 16 43.3137 16 40V12Z"
-                          fill="currentColor"
-                          fillOpacity="0.2"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        />
-                        {/* EN Text */}
-                        <text
-                          x="32"
-                          y="30"
-                          textAnchor="middle"
-                          fill="currentColor"
-                          fontSize="16"
-                          fontWeight="bold"
-                          fontFamily="monospace"
-                        >
-                          EN
-                        </text>
-                      </svg>
+              {/* Languages Card */}
+              <Card className="skill-card-enhanced scroll-animate scroll-animate-right">
+                <CardHeader>
+                  <div className="flex flex-col items-center space-y-4 text-center">
+                    <div className="p-4 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-full">
+                      <Globe className="h-16 w-16 text-purple-400 skill-icon-enhanced animate-pulse-slow" />
                     </div>
-                  ),
-                  skills: [
-                    "Fluent",
-                    "Professional",
-                    "Technical",
-                    "Academic",
-                    "Business",
-                  ],
-                  level: 95,
-                },
-                {
-                  title: "Urdu",
-                  icon: (
-                    <div className="relative">
-                      <svg
-                        className="h-16 w-16 text-pink-400 skill-icon-enhanced animate-pulse-glow"
-                        viewBox="0 0 64 64"
-                        fill="none"
-                      >
-                        {/* Urdu Background */}
-                        <rect
-                          x="8"
-                          y="8"
-                          width="48"
-                          height="48"
-                          rx="8"
-                          fill="currentColor"
-                          fillOpacity="0.2"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        />
-                        {/* Arabic Letters representing Urdu */}
-                        <text
-                          x="32"
-                          y="25"
-                          textAnchor="middle"
-                          fill="currentColor"
-                          fontSize="14"
-                          fontWeight="bold"
-                          fontFamily="Arial"
+                    <CardTitle className="text-2xl md:text-3xl font-black text-white">
+                      LANGUAGES
+                    </CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-6">
+                    <div className="grid grid-cols-1 gap-4">
+                      {[
+                        {
+                          language: "English",
+                          level: "Native",
+                          icon: (
+                            <svg
+                              className="h-8 w-8 text-purple-400"
+                              viewBox="0 0 64 64"
+                              fill="none"
+                            >
+                              <path
+                                d="M16 12C16 8.68629 18.6863 6 22 6H42C45.3137 6 48 8.68629 48 12V40C48 43.3137 45.3137 46 42 46H28L20 54V46H22C18.6863 46 16 43.3137 16 40V12Z"
+                                fill="currentColor"
+                                fillOpacity="0.2"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                              />
+                              <text
+                                x="32"
+                                y="35"
+                                textAnchor="middle"
+                                fill="currentColor"
+                                fontSize="16"
+                                fontWeight="bold"
+                                fontFamily="Arial"
+                              >
+                                EN
+                              </text>
+                            </svg>
+                          ),
+                        },
+                        {
+                          language: "Urdu",
+                          level: "Native",
+                          icon: (
+                            <svg
+                              className="h-8 w-8 text-blue-400"
+                              viewBox="0 0 64 64"
+                              fill="none"
+                            >
+                              <rect
+                                x="12"
+                                y="12"
+                                width="40"
+                                height="32"
+                                rx="4"
+                                fill="currentColor"
+                                fillOpacity="0.2"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                              />
+                              <text
+                                x="20"
+                                y="40"
+                                textAnchor="middle"
+                                fill="currentColor"
+                                fontSize="14"
+                                fontWeight="bold"
+                                fontFamily="Arial"
+                              >
+                                ر
+                              </text>
+                              <text
+                                x="44"
+                                y="40"
+                                textAnchor="middle"
+                                fill="currentColor"
+                                fontSize="14"
+                                fontWeight="bold"
+                                fontFamily="Arial"
+                              >
+                                د
+                              </text>
+                            </svg>
+                          ),
+                        },
+                        {
+                          language: "Mandarin",
+                          level: "Beginner",
+                          icon: (
+                            <svg
+                              className="h-8 w-8 text-orange-400"
+                              viewBox="0 0 64 64"
+                              fill="none"
+                            >
+                              <path
+                                d="M16 12C16 8.68629 18.6863 6 22 6H42C45.3137 6 48 8.68629 48 12V40C48 43.3137 45.3137 46 42 46H28L20 54V46H22C18.6863 46 16 43.3137 16 40V12Z"
+                                fill="currentColor"
+                                fillOpacity="0.2"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                              />
+                              <text
+                                x="32"
+                                y="35"
+                                textAnchor="middle"
+                                fill="currentColor"
+                                fontSize="16"
+                                fontWeight="bold"
+                                fontFamily="serif"
+                              >
+                                文
+                              </text>
+                            </svg>
+                          ),
+                        },
+                      ].map((item, index) => (
+                        <div
+                          key={item.language}
+                          className="flex justify-between items-center p-3 bg-gray-800/50 rounded-lg"
                         >
-                          ا
-                        </text>
-                        <text
-                          x="20"
-                          y="40"
-                          textAnchor="middle"
-                          fill="currentColor"
-                          fontSize="14"
-                          fontWeight="bold"
-                          fontFamily="Arial"
-                        >
-                          ر
-                        </text>
-                        <text
-                          x="44"
-                          y="40"
-                          textAnchor="middle"
-                          fill="currentColor"
-                          fontSize="14"
-                          fontWeight="bold"
-                          fontFamily="Arial"
-                        >
-                          د
-                        </text>
-                        {/* Decorative elements */}
-                        <circle
-                          cx="16"
-                          cy="16"
-                          r="2"
-                          fill="currentColor"
-                          opacity="0.6"
-                        />
-                        <circle
-                          cx="48"
-                          cy="16"
-                          r="2"
-                          fill="currentColor"
-                          opacity="0.6"
-                        />
-                        <circle
-                          cx="16"
-                          cy="48"
-                          r="2"
-                          fill="currentColor"
-                          opacity="0.6"
-                        />
-                        <circle
-                          cx="48"
-                          cy="48"
-                          r="2"
-                          fill="currentColor"
-                          opacity="0.6"
-                        />
-                      </svg>
-                    </div>
-                  ),
-                  skills: [
-                    "Native",
-                    "Fluent",
-                    "Professional",
-                    "Literary",
-                    "Conversational",
-                  ],
-                  level: 100,
-                },
-                {
-                  title: "Mandarin",
-                  icon: (
-                    <div className="relative">
-                      <svg
-                        className="h-16 w-16 text-orange-400 skill-icon-enhanced animate-float"
-                        viewBox="0 0 64 64"
-                        fill="none"
-                      >
-                        {/* Chinese Dialog Bubble */}
-                        <path
-                          d="M16 12C16 8.68629 18.6863 6 22 6H42C45.3137 6 48 8.68629 48 12V40C48 43.3137 45.3137 46 42 46H28L20 54V46H22C18.6863 46 16 43.3137 16 40V12Z"
-                          fill="currentColor"
-                          fillOpacity="0.2"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        />
-                        {/* Chinese Character 文 */}
-                        <text
-                          x="32"
-                          y="35"
-                          textAnchor="middle"
-                          fill="currentColor"
-                          fontSize="20"
-                          fontWeight="bold"
-                          fontFamily="serif"
-                        >
-                          文
-                        </text>
-                        {/* Decorative brush strokes */}
-                        <path
-                          d="M15 15 Q20 20 25 15"
-                          stroke="currentColor"
-                          strokeWidth="1"
-                          fill="none"
-                          opacity="0.4"
-                        />
-                        <path
-                          d="M39 15 Q44 20 49 15"
-                          stroke="currentColor"
-                          strokeWidth="1"
-                          fill="none"
-                          opacity="0.4"
-                        />
-                      </svg>
-                    </div>
-                  ),
-                  skills: [
-                    "Beginner",
-                    "Learning Basics",
-                    "Characters Only",
-                    "HSK 1",
-                    "Just Starting",
-                  ],
-                  level: 15,
-                },
-              ].map((skill, index) => (
-                <Card
-                  key={skill.title}
-                  className={`skill-card-enhanced scroll-animate ${
-                    index % 2 === 0
-                      ? "scroll-animate-left"
-                      : "scroll-animate-right"
-                  }`}
-                >
-                  <CardHeader>
-                    <div className="flex flex-col items-center space-y-4 text-center">
-                      <div className="p-4 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-full">
-                        {skill.icon}
-                      </div>
-                      <CardTitle className="text-2xl md:text-3xl font-black text-white text-glitch-enhanced">
-                        {skill.title}
-                      </CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-6">
-                      <div className="flex flex-wrap justify-center gap-3">
-                        {skill.skills.map((s) => (
-                          <span
-                            key={s}
-                            className="skill-tag-enhanced text-lg font-bold py-3 px-5 text-center min-w-[120px] shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400"
-                          >
-                            {s}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="mt-8">
-                        <div className="flex justify-between text-lg font-black text-gray-400 mb-4">
-                          <span>PROFICIENCY</span>
-                          <span className="text-xl font-bold text-purple-400">
-                            {skill.level}%
+                          <div className="flex items-center space-x-3">
+                            {item.icon}
+                            <span className="text-lg font-bold text-gray-300">
+                              {item.language}
+                            </span>
+                          </div>
+                          <span className="text-sm font-bold text-purple-400 bg-purple-400/20 px-3 py-1 rounded-full">
+                            {item.level}
                           </span>
                         </div>
-                        <div className="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
-                          <div
-                            className="bg-gradient-to-r from-purple-500 to-pink-500 h-4 rounded-full transition-all duration-2000 ease-out shadow-lg"
-                            style={{ width: `${skill.level}%` }}
-                          ></div>
-                        </div>
-                      </div>
+                      ))}
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -839,10 +601,10 @@ export default function Home() {
         <section id="experience" className="py-16 md:py-20 relative">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 md:mb-20">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 md:mb-10 bg-gradient-to-r from-blue-400 via-orange-400 to-blue-400 bg-clip-text text-transparent text-glitch-enhanced">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 md:mb-10 bg-gradient-to-r from-blue-400 via-orange-400 to-blue-400 bg-clip-text text-transparent">
                 EXPERIENCE
               </h2>
-              <p className="text-2xl md:text-3xl text-gray-400 max-w-4xl mx-auto px-4 text-decrypt-enhanced font-black">
+              <p className="text-2xl md:text-3xl text-gray-400 max-w-4xl mx-auto px-4 font-black">
                 Real-world applications of electrical engineering and software
                 development expertise
               </p>
@@ -855,15 +617,31 @@ export default function Home() {
 
                 {[
                   {
+
+                    company: "HYR",
+                    role: "Software and Design Intern",
+                    period: "July 2025 - Aug 2025",
+                    description:
+                      "Redesigned UI/UX of staffing solution app using Figma, improving shift-booking flows and reducing user complaints by 30% while boosting worker sign-up conversion by 25%",
+                    achievements: [
+                      "Redesigned UI/UX using Figma",
+                      "Improved shift-booking flows",
+                      "Reduced user complaints by 30%",
+                      "Increased worker sign-up by 25%",
+                      "Enhanced app stability by 40%",
+                    ],
+                  },
+                  {
                     company: "Gryfyn",
                     role: "Data Analyst Intern",
                     period: "Mar 2025 - Apr 2025",
                     description:
-                      "Developed analytics dashboard for Mootiez social platform, aggregating user data from 500+ users and accelerating team decisions by 20%",
+                      "Conducted rigorous testing and developed new features for Mootiez social platform, collecting user feedback from 500+ users to drive product improvements",
                     achievements: [
                       "Built Flask-based analytics dashboard",
                       "Collected user feedback from 500+ users",
-                      "Drove product improvements",
+                      "Aggregated multi-platform user data",
+                      "Accelerated team decisions by 20%",
                     ],
                   },
                   {
@@ -871,11 +649,12 @@ export default function Home() {
                     role: "Software Engineer Intern",
                     period: "July 2024 - Aug 2024",
                     description:
-                      "Created React web app with Chatbot for Chinese Literature education, empowering 1500+ students to improve language proficiency",
+                      "Developed React web app with Chatbot for Chinese Literature education at Chinese University of Hong Kong, empowering 1500+ students to improve language proficiency",
                     achievements: [
                       "Developed React web application",
                       "Engineered prompt-based chatbots",
                       "Built Flutter app for essay scanning",
+                      "Enhanced language learning tools",
                     ],
                   },
                 ].map((exp, index) => (
@@ -896,7 +675,7 @@ export default function Home() {
                         <CardHeader>
                           <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-2 md:space-y-0">
                             <div className="text-left">
-                              <CardTitle className="text-2xl md:text-3xl font-black text-white text-glitch-enhanced">
+                              <CardTitle className="text-2xl md:text-3xl font-black text-white">
                                 {exp.role}
                               </CardTitle>
                               <CardDescription className="text-xl text-blue-400 font-black">
@@ -914,7 +693,7 @@ export default function Home() {
                             {exp.description}
                           </p>
                           <div className="space-y-3">
-                            <h4 className="text-xl font-black text-orange-400 text-glitch-enhanced">
+                            <h4 className="text-xl font-black text-orange-400">
                               KEY ACHIEVEMENTS:
                             </h4>
                             {exp.achievements.map((achievement) => (
@@ -943,10 +722,10 @@ export default function Home() {
         <section id="projects" className="py-16 md:py-20 relative">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 md:mb-20">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 md:mb-10 bg-gradient-to-r from-blue-400 via-orange-400 to-blue-400 bg-clip-text text-transparent text-glitch-enhanced">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 md:mb-10 bg-gradient-to-r from-blue-400 via-orange-400 to-blue-400 bg-clip-text text-transparent">
                 FEATURED PROJECTS
               </h2>
-              <p className="text-2xl md:text-3xl text-gray-400 max-w-4xl mx-auto px-4 text-decrypt-enhanced font-black">
+              <p className="text-2xl md:text-3xl text-gray-400 max-w-4xl mx-auto px-4 font-black">
                 Innovative projects combining electrical engineering, data
                 analysis, and software development
               </p>
@@ -955,10 +734,32 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
               {[
                 {
+                  title: "PolyU GUR Course Reviews Platform",
+                  role: "Personal Project",
+                  description:
+                    "Full-stack web platform with Flask, SQLite, and Bootstrap 5 enabling PolyU students to discover, review, and rate 50+ courses across all GUR categories",
+                  technologies: [
+                    "Flask",
+                    "SQLite",
+                    "Bootstrap 5",
+                    "Python",
+                    "Web Development",
+                    "Database Design",
+                    "Frontend Development",
+                  ],
+                  highlights: [
+                    "Integrated 50+ courses across all GUR categories",
+                    "Implemented grade distribution analytics",
+                    "Added teacher ratings system",
+                    "Created personalized dashboards",
+                    "Projected to reduce course-selection inquiries by 60%",
+                  ],
+                },
+                {
                   title: "Sound Level Analyzer for PolyU Library",
                   role: "Data Analyst",
                   description:
-                    "Real-time noise monitoring system using Python, FastAPI, and D3.js for library floor visualization",
+                    "Real-time noise monitoring system using Python, FastAPI, and D3.js for library floor visualization in a team of 4",
                   technologies: [
                     "Python",
                     "FastAPI",
@@ -979,7 +780,7 @@ export default function Home() {
                   title: "3-Phase Brushless Permanent Magnet Generator",
                   role: "Arduino Programmer",
                   description:
-                    "Designed and constructed brushless PMG with Arduino-based power monitoring system",
+                    "Designed and constructed brushless PMG with Arduino-based power monitoring system in a team of 6",
                   technologies: [
                     "Arduino",
                     "INA219 Sensor",
@@ -996,6 +797,46 @@ export default function Home() {
                     "Efficient energy conversion system",
                   ],
                 },
+                {
+                  title: "PolyU Industrial Centre Lighting Design",
+                  role: "Engineering Design",
+                  description:
+                    "Developed detailed lighting system layout in AutoCAD for PolyU's Industrial Centre, ensuring compliance with illumination standards and reducing power consumption by 15%",
+                  technologies: [
+                    "AutoCAD",
+                    "Lighting Design",
+                    "Electrical Systems",
+                    "Building Services",
+                    "Energy Efficiency",
+                    "Safety Standards",
+                  ],
+                  highlights: [
+                    "Designed lighting system layout",
+                    "Ensured compliance with standards",
+                    "Calculated lighting loads",
+                    "Reduced power consumption by 15%",
+                  ],
+                },
+                {
+                  title: "EV Car Park MEP Design",
+                  role: "Engineering Design",
+                  description:
+                    "Designed full MEP layout for electric vehicle car park using AutoCAD, focusing on electrical distribution and safety systems with emphasis on energy optimization",
+                  technologies: [
+                    "AutoCAD",
+                    "MEP Design",
+                    "Electrical Distribution",
+                    "Ventilation Systems",
+                    "Building Services",
+                    "Energy Optimization",
+                  ],
+                  highlights: [
+                    "Designed complete MEP layout",
+                    "Optimized energy efficiency",
+                    "Applied building services principles",
+                    "Prepared scalable design documentation",
+                  ],
+                },
               ].map((project, index) => (
                 <Card
                   key={project.title}
@@ -1006,7 +847,7 @@ export default function Home() {
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
                       <div className="text-left">
-                        <CardTitle className="text-3xl md:text-4xl font-black text-white text-glitch-enhanced mb-4">
+                        <CardTitle className="text-3xl md:text-4xl font-black text-white mb-4">
                           {project.title}
                         </CardTitle>
                         <CardDescription className="text-2xl text-blue-400 font-black">
@@ -1022,7 +863,7 @@ export default function Home() {
                     </p>
 
                     <div className="project-highlight-enhanced">
-                      <h4 className="text-2xl font-black text-blue-400 mb-6 text-glitch-enhanced text-center">
+                      <h4 className="text-2xl font-black text-blue-400 mb-6 text-center">
                         TECHNOLOGIES USED:
                       </h4>
                       <div className="flex flex-wrap justify-center gap-4 mb-6">
@@ -1038,7 +879,7 @@ export default function Home() {
                     </div>
 
                     <div className="project-highlight-enhanced">
-                      <h4 className="text-2xl font-black text-orange-400 mb-6 text-glitch-enhanced text-center">
+                      <h4 className="text-2xl font-black text-orange-400 mb-6 text-center">
                         KEY ACHIEVEMENTS:
                       </h4>
                       <div className="space-y-4">
@@ -1055,6 +896,20 @@ export default function Home() {
                         ))}
                       </div>
                     </div>
+
+                    {/* View Project Button */}
+                    <div className="flex justify-center mt-8">
+                      <a
+                        href="https://www.linkedin.com/in/muhammad-mairaj/details/projects/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block"
+                      >
+                        <Button className="bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white font-black py-4 px-8 md:px-12 rounded-full transition-all duration-300 transform hover:scale-105 text-lg md:text-xl shadow-lg hover:shadow-blue-500/25">
+                          VIEW PROJECT
+                        </Button>
+                      </a>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
@@ -1066,10 +921,10 @@ export default function Home() {
         <section id="education" className="py-16 md:py-20 relative">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 md:mb-20">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 md:mb-10 bg-gradient-to-r from-blue-400 via-orange-400 to-blue-400 bg-clip-text text-transparent text-glitch-enhanced">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 md:mb-10 bg-gradient-to-r from-blue-400 via-orange-400 to-blue-400 bg-clip-text text-transparent">
                 EDUCATION
               </h2>
-              <p className="text-2xl md:text-3xl text-gray-400 max-w-4xl mx-auto px-4 text-decrypt-enhanced font-black">
+              <p className="text-2xl md:text-3xl text-gray-400 max-w-4xl mx-auto px-4 font-black">
                 Academic excellence and continuous learning in electrical
                 engineering
               </p>
@@ -1085,7 +940,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="text-left">
-                      <CardTitle className="text-3xl md:text-4xl font-black text-white text-glitch-enhanced mb-4">
+                      <CardTitle className="text-3xl md:text-4xl font-black text-white mb-4">
                         The Hong Kong Polytechnic University
                       </CardTitle>
                       <CardDescription className="text-2xl text-blue-400 font-black">
@@ -1099,7 +954,7 @@ export default function Home() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <h4 className="text-2xl font-black text-orange-400 mb-8 text-glitch-enhanced">
+                  <h4 className="text-2xl font-black text-orange-400 mb-8">
                     RELEVANT COURSEWORK:
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1122,6 +977,47 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
+
+                  <h4 className="text-2xl font-black text-blue-400 mb-8 mt-12">
+                    OVERSEAS LEARNING:
+                  </h4>
+                  <div className="space-y-6">
+                    <div className="p-6 bg-gradient-to-r from-green-600/10 to-blue-600/10 rounded-xl hover:from-green-600/20 hover:to-blue-600/20 transition-all duration-300 transform hover:scale-102 border border-green-500/20">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-4 h-4 bg-green-400 rounded-full mt-3 flex-shrink-0 animate-pulse shadow-lg"></div>
+                        <div>
+                          <h5 className="text-xl font-black text-green-400 mb-2">
+                            Mathematics and AI at Cambridge University
+                          </h5>
+                          <p className="text-lg text-gray-300 font-bold mb-2">
+                            Summer 2025
+                          </p>
+                          <p className="text-gray-400 font-bold">
+                            Linear Algebra, Data Analysis, AI Algorithms, Python
+                            Programming
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="p-6 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-xl hover:from-purple-600/20 hover:to-pink-600/20 transition-all duration-300 transform hover:scale-102 border border-purple-500/20">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-4 h-4 bg-purple-400 rounded-full mt-3 flex-shrink-0 animate-pulse shadow-lg"></div>
+                        <div>
+                          <h5 className="text-xl font-black text-purple-400 mb-2">
+                            Engineering Entrepreneurship at NU Singapore
+                          </h5>
+                          <p className="text-lg text-gray-300 font-bold mb-2">
+                            Summer 2025
+                          </p>
+                          <p className="text-gray-400 font-bold">
+                            Engineering Entrepreneurship, Problem Solving,
+                            Communication, Pitching
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -1132,7 +1028,7 @@ export default function Home() {
                       <div className="p-4 bg-gradient-to-br from-orange-600/20 to-blue-600/20 rounded-full">
                         <Award className="h-20 w-20 md:h-24 md:w-24 text-orange-400 skill-icon-enhanced animate-pulse-glow" />
                       </div>
-                      <CardTitle className="text-3xl md:text-4xl font-black text-white text-glitch-enhanced">
+                      <CardTitle className="text-3xl md:text-4xl font-black text-white">
                         AWARDS
                       </CardTitle>
                     </div>
@@ -1164,7 +1060,7 @@ export default function Home() {
                       <div className="p-4 bg-gradient-to-br from-blue-600/20 to-orange-600/20 rounded-full">
                         <Cpu className="h-20 w-20 md:h-24 md:w-24 text-blue-400 skill-icon-enhanced animate-spin-slow" />
                       </div>
-                      <CardTitle className="text-3xl md:text-4xl font-black text-white text-glitch-enhanced">
+                      <CardTitle className="text-3xl md:text-4xl font-black text-white">
                         ACTIVITIES
                       </CardTitle>
                     </div>
@@ -1210,7 +1106,7 @@ export default function Home() {
             <div className="max-w-2xl mx-auto">
               <Card className="contact-card-enhanced scroll-animate">
                 <CardHeader>
-                  <CardTitle className="text-3xl md:text-4xl font-black text-white text-center text-glitch-enhanced">
+                  <CardTitle className="text-3xl md:text-4xl font-black text-white text-center">
                     GET IN TOUCH
                   </CardTitle>
                   <CardDescription className="text-center text-gray-400 text-xl font-black">
@@ -1315,9 +1211,10 @@ export default function Home() {
                 </CardContent>
               </Card>
 
+              {/* Download CV Button outside the card */}
               <div className="flex justify-center mt-8">
                 <a
-                  href="/Muhammad_Mairaj_CV.pdf"
+                  href="/Muhammad_Mairaj_CV_detailed.pdf"
                   download="Muhammad_Mairaj_CV.pdf"
                   className="inline-block"
                 >
