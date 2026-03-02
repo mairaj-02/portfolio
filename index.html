@@ -56,6 +56,7 @@
         .mono { font-family: var(--font-mono); font-size: 0.85rem; }
         .highlight { color: var(--primary); }
         .accent { color: var(--secondary); }
+        .text-dim { color: var(--text-dim); }
 
         /* --- NAVIGATION --- */
         nav {
@@ -120,6 +121,8 @@
             padding: 2rem;
             position: relative;
             transition: 0.3s;
+            display: flex;
+            flex-direction: column;
         }
         .card:hover { border-color: var(--primary); transform: translateY(-2px); }
         
@@ -166,7 +169,7 @@
         .module-card h4 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--text-main); }
         .module-card p { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 1rem; }
 
-        /* --- HERO EXP CARD --- */
+        /* --- FEATURED EXP CARD --- */
         .featured-card {
             grid-column: span 2;
             background: radial-gradient(circle at top right, #1a1a1a, #000);
@@ -184,7 +187,7 @@
         }
 
         /* --- TAGS & CHIPS --- */
-        .chip-group { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+        .chip-group { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; }
         .chip {
             font-family: var(--font-mono);
             font-size: 0.75rem;
@@ -384,14 +387,14 @@
         <div class="container hero-flex">
             <div class="hero-main">
                 <div class="mono highlight">// INTRODUCTION</div>
-                <h1>Electrical<br>& Software<br><span class="text-dim">Engineering</span></h1>
+                <h1>Electrical<br>& Software<br><span class="text-dim">Engineer &#128511;</span></h1>
                 <h2>Muhammad Mairaj | PolyU</h2>
                 <div class="chip-group" style="margin-top: 1.5rem;">
                     <div class="chip"><i class="ri-flashlight-line"></i> Power & Energy</div>
-                    <div class="chip"><i class="ri-cpu-line"></i> Embedded Systems</div>
-                    <div class="chip"><i class="ri-settings-4-line"></i> Automation</div>
-                    <div class="chip"><i class="ri-pulse-line"></i> Signal Processing</div>
-                    <div class="chip"><i class="ri-broadcast-line"></i> Telecommunications</div>
+                    <div class="chip"><i class="ri-cpu-line"></i> Power Electronics</div>
+                    <div class="chip"><i class="ri-settings-4-line"></i> Automation & Control</div>
+                    <div class="chip"><i class="ri-pulse-line"></i> Signal Processing & Telecom</div>
+                    <div class="chip"><i class="ri-broadcast-line"></i> Embedded Systems & Software</div>
                 </div>
             </div>
             <div class="hero-stats">
@@ -494,7 +497,7 @@
         </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
+    <!-- EXPERIENCE SECTION (UPDATED) -->
     <section id="experience" class="section-pad">
         <div class="container">
             <div class="section-head">
@@ -503,63 +506,78 @@
             </div>
 
             <div class="grid-2">
-                <!-- FEATURED EE ROLE -->
+                
+                <!-- NEW FEATURED ROLE: RESEARCH ASSISTANT -->
                 <article class="card featured-card">
-                    <div class="role-badge">Core Engineering</div>
-                    <h3>Electrical Engineering Trainee</h3>
-                    <div class="mono text-dim" style="margin-bottom: 1.5rem;">PolyU Industrial Centre | 2025</div>
+                    <div class="role-badge">Research & Development</div>
+                    <h3>Undergraduate Research Assistant</h3>
+                    <div class="mono text-dim" style="margin-bottom: 1.5rem;">PolyU Research Centre for Electric Vehicles | Feb 2026 - Present</div>
                     
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
                         <div>
-                            <span class="metric-big">4</span>
-                            <span class="metric-desc">Specialized Modules</span>
+                            <span class="metric-big">Power Converters</span>
+                            <span class="metric-desc">High Density DC-AC Inverter</span>
                         </div>
                         <div>
-                            <span class="metric-big">100%</span>
-                            <span class="metric-desc">EMSD Compliance</span>
+                            <span class="metric-big">Intelligent Control</span>
+                            <span class="metric-desc">Neural Network Control</span>
                         </div>
                     </div>
 
                     <div class="chip-group">
-                        <div class="chip"><i class="ri-flashlight-line"></i> LV Distribution</div>
-                        <div class="chip"><i class="ri-home-wifi-line"></i> Building Automation</div>
-                        <div class="chip"><i class="ri-tools-line"></i> Panel Commissioning</div>
-                        <div class="chip"><i class="ri-cpu-line"></i> PLC Programming</div>
-                        <div class="chip"><i class="ri-shield-check-line"></i> Safety Protocols</div>
+                        <div class="chip"><i class="ri-flashlight-line"></i> Wireless Power Transfer</div>
+                        <div class="chip"><i class="ri-cpu-line"></i> MATLAB/Simulink</div>
+                        <div class="chip"><i class="ri-pulse-line"></i> Voltage Balancing</div>
+                        <div class="chip"><i class="ri-settings-4-line"></i> Altium Designer</div>
+                        <div class="chip"><i class="ri-code-s-slash-line"></i> PCB Testing & Debugging</div>
                     </div>
                 </article>
 
-                <!-- OTHER ROLES (Grouped) -->
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    <!-- Role 2 -->
-                    <article class="card">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                            <h4 class="highlight">Century Innovation Labs</h4>
-                            <span class="mono text-dim">2024</span>
-                        </div>
-                        <div class="mono text-dim" style="margin-bottom: 1rem;">Software Engineer Intern</div>
-                        <div class="chip-group">
-                            <div class="chip">OpenAI API</div>
-                            <div class="chip">Flutter</div>
-                            <div class="chip">React.js</div>
-                            <div class="chip">Logic Implementation</div>
-                        </div>
-                    </article>
+                <!-- PREVIOUS FEATURED ROLE (NOW STANDARD CARD) -->
+                <article class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <h4 class="highlight">Electrical Engineering Trainee</h4>
+                        <span class="mono text-dim">2025</span>
+                    </div>
+                    <div class="mono text-dim" style="margin-bottom: 1rem;">PolyU Industrial Centre</div>
+                    <div class="chip-group">
+                        <div class="chip">LV Distribution</div>
+                        <div class="chip">Building Automation</div>
+                        <div class="chip">Panel Commissioning</div>
+                        <div class="chip">PLC Programming</div>
+                        <div class="chip">Safety Protocols</div>
+                    </div>
+                </article>
 
-                    <!-- Role 3 -->
-                    <article class="card">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                            <h4 class="highlight">HYR</h4>
-                            <span class="mono text-dim">2025</span>
-                        </div>
-                        <div class="mono text-dim" style="margin-bottom: 1rem;">Software & Design Intern</div>
-                        <div class="chip-group">
-                            <div class="chip">UI/UX Optimization</div>
-                            <div class="chip">Efficiency +25%</div>
-                            <div class="chip">Figma</div>
-                        </div>
-                    </article>
-                </div>
+                <!-- ROLE 3 (Software) -->
+                <article class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <h4 class="highlight">Century Innovation Labs</h4>
+                        <span class="mono text-dim">2024</span>
+                    </div>
+                    <div class="mono text-dim" style="margin-bottom: 1rem;">Software Engineer Intern</div>
+                    <div class="chip-group">
+                        <div class="chip">OpenAI API</div>
+                        <div class="chip">JavaScript</div>
+                        <div class="chip">React.js</div>
+                        <div class="chip">Logic Implementation</div>
+                    </div>
+                </article>
+
+                <!-- ROLE 4 (Design) -->
+                <article class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <h4 class="highlight">HYR</h4>
+                        <span class="mono text-dim">2025</span>
+                    </div>
+                    <div class="mono text-dim" style="margin-bottom: 1rem;">Software & Design Intern</div>
+                    <div class="chip-group">
+                        <div class="chip">UI/UX Optimization</div>
+                        <div class="chip">Efficiency +25%</div>
+                        <div class="chip">Figma</div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
@@ -777,7 +795,9 @@
                         <div class="skill-pill">Jupyter Notebook</div>
                         <div class="skill-pill">AutoCAD</div>
                         <div class="skill-pill">SolidWorks</div>
-                        <div class="skill-pill">PSpice</div>
+                        <div class="skill-pill">LTSpice</div>
+                        <div class="skill-pill">Altium Designer</div>
+                        <div class="skill-pill">PSIM</div>
                     </div>
                 </div>
 
