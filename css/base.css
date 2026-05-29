@@ -1,0 +1,79 @@
+/* =============================================================
+   BASE.CSS — Design Tokens, Reset, Typography, Global Utilities
+   ============================================================= */
+
+/* --- DESIGN TOKENS (CSS Custom Properties) ---
+   Single source of truth for all colors, fonts, and spacing.
+   Change a value here and it updates everywhere. */
+:root {
+    --bg-dark:        #050505;         /* Page background */
+    --bg-panel:       #111111;         /* Card/panel background */
+    --bg-panel-light: #1a1a1a;         /* Slightly lighter panel */
+    --primary:        #00f0ff;         /* Electric cyan – main accent */
+    --primary-dim:    rgba(0, 240, 255, 0.1);
+    --secondary:      #ffae00;         /* Safety amber – secondary accent */
+    --text-main:      #ffffff;
+    --text-dim:       #888888;
+    --border:         #333333;
+    --font-head:      'Space Grotesk', sans-serif;
+    --font-mono:      'JetBrains Mono', monospace;
+    --gap:            1.5rem;
+}
+
+/* --- RESET --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Prevent horizontal scrollbar on all viewports */
+html, body { overflow-x: hidden; width: 100%; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-head);
+    line-height: 1.5;
+
+    /* Subtle schematic-grid texture via repeating CSS gradients */
+    background-image:
+        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* --- GLOBAL ELEMENT DEFAULTS --- */
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+
+/* --- TYPOGRAPHY UTILITIES --- */
+h1, h2, h3 { font-weight: 700; text-transform: uppercase; letter-spacing: -0.5px; }
+
+.mono      { font-family: var(--font-mono); font-size: 0.85rem; }
+.highlight { color: var(--primary); }
+.accent    { color: var(--secondary); }
+.text-dim  { color: var(--text-dim); }
+
+/* --- LAYOUT UTILITIES --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+/* Reusable grid configurations */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr;          gap: var(--gap); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr);   gap: var(--gap); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr);   gap: var(--gap); }
+
+/* Standard section wrapper: vertical padding + bottom divider */
+.section-pad { padding: 4rem 0; border-bottom: 1px solid var(--border); }
+
+/* Section heading line: "// Title" pattern */
+.section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-family: var(--font-mono);
+}
+.line-num { color: var(--text-dim); font-size: 0.9rem; }
