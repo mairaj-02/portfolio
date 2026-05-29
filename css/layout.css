@@ -1,0 +1,172 @@
+/* =============================================================
+   LAYOUT.CSS — Section-Level Layout: Nav, Hero, Footer
+   ============================================================= */
+
+
+/* --- NAVIGATION ---
+   Fixed bar at the top; blurs the content behind it. */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(5, 5, 5, 0.95);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.nav-inner { display: flex; justify-content: space-between; align-items: center; }
+
+/* Monospace logo/brand in the nav */
+.brand {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-main);
+    border: 1px solid var(--primary);
+    padding: 0.2rem 0.6rem;
+    white-space: nowrap;
+}
+
+/* Nav link list */
+.nav-links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: flex-end; }
+.nav-links a {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--primary); }
+
+
+/* --- HERO ---
+   Full-width intro section with name, title, and stat counters. */
+header {
+    padding: 8rem 0 4rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Side-by-side layout: intro text on left, stats on right */
+.hero-flex {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.hero-main h1 {
+    font-size: 4rem;
+    line-height: 0.9;
+    margin-bottom: 1rem;
+    word-break: break-word;
+}
+.hero-main h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+}
+
+/* Stats panel (CGPA, grade, ranking) */
+.hero-stats {
+    display: flex;
+    gap: 1.5rem;
+    border-left: 2px solid var(--primary);
+    padding-left: 1.5rem;
+    flex-shrink: 0;
+}
+.stat-item span { display: block; }
+.stat-num   { font-size: 2.5rem; font-weight: 700; color: var(--secondary); line-height: 1; }
+.stat-label { font-size: 0.8rem; text-transform: uppercase; color: var(--text-dim); margin-top: 0.25rem; }
+
+
+/* --- FOOTER --- */
+footer {
+    padding: 6rem 0 4rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+}
+
+/* Contact icon + text links */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    transition: 0.3s;
+}
+.footer-link:hover { color: var(--primary); }
+.footer-link i     { font-size: 1.3rem; }
+
+.footer-actions { margin-top: 2rem; }
+
+
+/* =============================================================
+   RESPONSIVE — Media Queries (mobile-first breakpoints)
+   ============================================================= */
+
+/* --- Tablet and below (≤900px) --- */
+@media (max-width: 900px) {
+    /* Collapse 3- and 4-column grids to 2 columns */
+    .grid-4, .grid-3 { grid-template-columns: 1fr 1fr; }
+}
+
+/* --- Mobile (≤768px) --- */
+@media (max-width: 768px) {
+    /* Stack hero vertically */
+    .hero-flex { flex-direction: column; align-items: flex-start; gap: 2rem; }
+
+    /* Stats spread across full width without the left border */
+    .hero-stats {
+        border-left: none;
+        padding-left: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* Collapse all multi-column grids to a single column */
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+
+    /* Featured card loses its 2-column span */
+    .featured-card { grid-column: span 1; }
+
+    /* Shrink hero heading */
+    .hero-main h1 { font-size: 2.8rem; }
+    .metric-big   { font-size: 1.5rem; }
+
+    /* Skills: 2-column grid instead of auto-fill (prevents overflow) */
+    .skill-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Stack footer contact links vertically */
+    .footer-links { flex-direction: column; gap: 1rem; }
+
+    /* Stack metrics vertically inside the featured experience card */
+    .metrics-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Small phones (≤480px) --- */
+@media (max-width: 480px) {
+    h1 { font-size: 2.2rem; }
+
+    /* Spread stats evenly on narrow screens */
+    .hero-stats { justify-content: space-around; gap: 0.5rem; }
+    .stat-num   { font-size: 2rem; }
+
+    /* Stack nav brand + links vertically so nothing clips */
+    .nav-inner  { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .nav-links  { justify-content: flex-start; width: 100%; }
+
+    /* Tighter chips on very small screens */
+    .chip { font-size: 0.65rem; padding: 0.3rem 0.5rem; }
+}
