@@ -6,17 +6,15 @@
     <title>Muhammad Mairaj | Electrical Engineering Portfolio</title>
 
     <!-- === EXTERNAL DEPENDENCIES === -->
-    <!-- Icon library -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- Google Fonts: display heading + monospace code font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
 
     <!-- === STYLESHEETS (modular) ===
-         base.css      → tokens, reset, typography, layout utilities
-         components.css → cards, chips, skill pills, project cards, buttons
-         layout.css    → nav, hero, footer, responsive breakpoints       -->
+         base.css       → tokens, reset, typography, layout utilities
+         components.css → cards, chips, skill pills, cert cards, vol cards, buttons
+         layout.css     → nav, hero, footer, responsive breakpoints       -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -32,6 +30,7 @@
             <div class="nav-links mono">
                 <a href="#education">Academic</a>
                 <a href="#experience">Experience</a>
+                <a href="#volunteering">Volunteering</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
             </div>
@@ -81,8 +80,7 @@
 
     <!-- =========================================================
          EDUCATION
-         Degree details, coursework grades, overseas learning,
-         and certifications.
+         Subsections: Degree + Coursework | Overseas Learning | Certifications
     ========================================================== -->
     <section id="education" class="section-pad">
         <div class="container">
@@ -91,16 +89,18 @@
                 <span>Academic Profile</span>
             </div>
 
+            <!-- Row 1: Degree card + Overseas Learning -->
+            <div class="grid-2" style="margin-bottom: 3rem;">
 
-            <div class="grid-2">
                 <!-- Main Degree Card -->
                 <article class="card">
                     <h3 style="margin-bottom: 0.5rem;">The Hong Kong Polytechnic University</h3>
                     <div class="mono text-dim" style="margin-bottom: 1.5rem;">BEng (Hons) Electrical Engineering | 2023 - 2027</div>
 
-                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-                        <a href="/sources/Muhammad_MAIRAJ_Transcripts.pdf" download class="chip" style="color: #fff;">
-                            <i class="ri-download-2-line"></i> Download Transcripts
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center;">
+                        <!-- Opens transcript PDF in a new tab; recruiter can download from there -->
+                        <a href="/sources/Muhammad_MAIRAJ_Transcripts.pdf" target="_blank" class="chip" style="color: var(--primary); border-color: var(--primary);">
+                            <i class="ri-file-text-line"></i> View Transcripts
                         </a>
                         <div class="chip">Full Ride Entry Scholarship</div>
                         <div class="chip">PolyU Men's Squash Team</div>
@@ -110,81 +110,144 @@
 
                     <!-- Scrollable grade list; see components.css → .coursework-list -->
                     <div class="coursework-list">
-                        <div class="grade-row"><span>Power Transmission &amp; Distribtion</span>
-                            <span class="grade-score excellent">A+</span>
-                        </div>
-                        <div class="grade-row"><span>Power Electronics &amp; Drives</span>                   
-                            <span class="grade-score excellent">A+</span>
-                        </div>
-                        <div class="grade-row"><span>Electrical Services in Buildings</span>
-                            <span class="grade-score excellent">A+</span>
-                        </div>
-                        <div class="grade-row"><span>Digital Control Systems</span> 
-                            <span class="grade-score excellent">A+</span>
-                        </div>
-                         <div class="grade-row"><span>Industrial COmputer Applications</span> 
-                            <span class="grade-score excellent">A+</span>
-                        </div>
-                        <div class="grade-row"><span>Circuits Analysis</span>                  
-                            <span class="grade-score excellent">A+</span>
-                        </div>
-                        <div class="grade-row"><span>Analog &amp; Digital Circuits</span>    
-                            <span class="grade-score excellent">A+</span>
-                        </div>
-                        <div class="grade-row"><span>Linear Systems &amp; Signal Processing</span>
-                            <span class="grade-score excellent">A+</span>
-                        </div>
-                        <div class="grade-row"><span>Electromecanical Energy Conversion</span>                 
-                            <span class="grade-score excellent">A+</span>
-                        </div>
-                        <div class="grade-row"><span>Electronics</span>                        
-                            <span class="grade-score">A</span>
-                        </div>
-                        <div class="grade-row"><span>Systems &amp; Control</span>              
-                            <span class="grade-score">A</span>
-                        </div>
-                        <div class="grade-row"><span>Computer Systems</span>                   
-                            <span class="grade-score">A</span>
-                        </div>
-                        <div class="grade-row"><span>Applied Electromagnetics</span>           
-                            <span class="grade-score">A</span>
-                        </div>
+                        <div class="grade-row"><span>Power Transmission &amp; Distribution</span>   <span class="grade-score excellent">A+</span></div>
+                        <div class="grade-row"><span>Power Electronics &amp; Drives</span>           <span class="grade-score excellent">A+</span></div>
+                        <div class="grade-row"><span>Electrical Services in Buildings</span>         <span class="grade-score excellent">A+</span></div>
+                        <div class="grade-row"><span>Digital Control Systems</span>                  <span class="grade-score excellent">A+</span></div>
+                        <div class="grade-row"><span>Industrial Computer Applications</span>         <span class="grade-score excellent">A+</span></div>
+                        <div class="grade-row"><span>Circuits Analysis</span>                        <span class="grade-score excellent">A+</span></div>
+                        <div class="grade-row"><span>Analog &amp; Digital Circuits</span>            <span class="grade-score excellent">A+</span></div>
+                        <div class="grade-row"><span>Linear Systems &amp; Signal Processing</span>   <span class="grade-score excellent">A+</span></div>
+                        <div class="grade-row"><span>Electromechanical Energy Conversion</span>      <span class="grade-score excellent">A+</span></div>
+                        <div class="grade-row"><span>Electronics</span>                              <span class="grade-score">A</span></div>
+                        <div class="grade-row"><span>Systems &amp; Control</span>                    <span class="grade-score">A</span></div>
+                        <div class="grade-row"><span>Computer Systems</span>                         <span class="grade-score">A</span></div>
+                        <div class="grade-row"><span>Applied Electromagnetics</span>                 <span class="grade-score">A</span></div>
                     </div>
                 </article>
 
-                <!-- Right column: overseas learning + certifications -->
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <!-- Overseas Learning -->
+                <article class="card" style="padding: 1.5rem;">
+                    <h4 style="margin-bottom: 1.5rem;">
+                        <i class="ri-global-line highlight"></i> Overseas Learning
+                    </h4>
+                    <div class="grid-2" style="gap: 1rem;">
 
-                    <!-- Overseas Learning -->
-                    <article class="card" style="padding: 1.5rem;">
-                        <h4 style="margin-bottom: 1rem;">
-                            <i class="ri-global-line highlight"></i> Overseas Learning
-                        </h4>
-                        <div class="grid-2">
-                            <div class="module-card">
-                                <div class="highlight"><i class="ri-bank-line"></i> Cambridge</div>
-                                <p>Math &amp; AI</p>
+                        <div class="module-card">
+                            <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-bank-line"></i> Cambridge</div>
+                            <p>Math &amp; AI</p>
+                            <div class="chip-group" style="justify-content: center; margin-bottom: 1rem;">
                                 <div class="chip">Python</div>
                                 <div class="chip">Algorithms</div>
                             </div>
-                            <div class="module-card">
-                                <div class="highlight"><i class="ri-building-4-line"></i> NU Singapore</div>
-                                <p>Engineering Entrepreneurship</p>
+                            <!-- Opens cert in a new tab -->
+                            <a href="/sources/cambridge_cert.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary);">
+                                <i class="ri-external-link-line"></i> View Certificate
+                            </a>
+                        </div>
+
+                        <div class="module-card">
+                            <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-building-4-line"></i> NUS Singapore</div>
+                            <p>Engineering Entrepreneurship</p>
+                            <div class="chip-group" style="justify-content: center; margin-bottom: 1rem;">
                                 <div class="chip">Pitching</div>
                                 <div class="chip">Problem Solving</div>
                             </div>
-                            <div class="module-card">
-                                <div class="highlight"><i class="ri-building-4-line"></i> Schneider Electric</div>
-                                <p>Sustainability</p>
+                            <a href="/sources/NUS_cert.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary);">
+                                <i class="ri-external-link-line"></i> View Certificate
+                            </a>
+                        </div>
+
+                        <div class="module-card">
+                            <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-building-4-line"></i> Schneider Electric</div>
+                            <p>Sustainability</p>
+                            <div class="chip-group" style="justify-content: center; margin-bottom: 1rem;">
                                 <div class="chip">Green Energy</div>
                                 <div class="chip">Electrification</div>
                             </div>
+                            <a href="/sources/Schneider_Electric.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary);">
+                                <i class="ri-external-link-line"></i> View Certificate
+                            </a>
                         </div>
-                    </article>
 
-                </div><!-- /right column -->
+                    </div>
+                </article>
 
-            </div><!-- /grid-2 -->
+            </div><!-- /Row 1 -->
+
+            <!-- Row 2: Certifications (full-width, 3-column card grid) -->
+            <div>
+                <h3 class="mono text-dim" style="margin-bottom: 1.5rem; font-size: 1rem;">// CERTIFICATIONS &amp; AWARDS</h3>
+
+                <!-- Each cert-card opens the certificate file in a new tab. -->
+
+                <div class="grid-3">
+
+                    <!-- Harvard CS50X -->
+                    <a href="/sources/CS50x.pdf" target="_blank" class="cert-card">
+                        <img src="/sources/cs50x_thumb.png" alt="cs50x" class="cert-thumb">
+                        <div class="cert-body">
+                            <div class="cert-title">Introduction to Computer Science</div>
+                            <div class="cert-issuer">Harvard's CS50X</div>
+                            <div class="cert-date">2024</div>
+                        </div>
+                    </a>
+
+                    <!-- Harvard CS50P -->
+                    <a href="/sources/CS50p.pdf" target="_blank" class="cert-card">
+                        <img src="/sources/cs50p_thumb.jpeg" alt="cs50 python" class="cert-thumb">
+                        <div class="cert-body">
+                            <div class="cert-title">Programming with Python</div>
+                            <div class="cert-issuer">Harvard's CS50P</div>
+                            <div class="cert-date">2026</div>
+                        </div>
+                    </a>
+
+                    <!-- Harvard CS50T -->
+                    <a href="/sources/CS50t.pdf" target="_blank" class="cert-card">
+                        <img src="/sources/cs50t_thumb.jpeg" alt="cs50 tech" class="cert-thumb">
+                        <div class="cert-body">
+                            <div class="cert-title">Understanding Technology</div>
+                            <div class="cert-issuer">Harvard's CS50T</div>
+                            <div class="cert-date">2024</div>
+                        </div>
+                    </a>
+
+                    <!-- IBM Hardware & OS -->
+                    <a href="/sources/IBM_Hardware_OS_Cert.pdf" target="_blank" class="cert-card">
+                        <img src="/sources/ibm_thumb.png" alt="IBM Cert" class="cert-thumb">
+                        <div class="cert-body">
+                            <div class="cert-title">Hardware &amp; Operating System Support</div>
+                            <div class="cert-issuer">IBM</div>
+                            <div class="cert-date">2024</div>
+                        </div>
+                    </a>
+
+                    <!-- Gold Medal -->
+                    <a href="/sources/gold_medal.pdf" target="_blank" class="cert-card">
+                        <img src="/sources/gold_medal_thumb.jpeg" alt="Gold Medal" class="cert-thumb">
+                        <div class="cert-body">
+                            <div class="cert-title">Gold Medal — 94% in HSSC Examinations</div>
+                            <div class="cert-issuer">Board of Intermediate Education</div>
+                            <div class="cert-date">2023</div>
+                        </div>
+                    </a>
+
+                    <!-- Duke of Edinburgh -->
+                    <a href="/sources/doe_cert.pdf" target="_blank" class="cert-card">
+                        <img src="/sources/doe_thumb.png" alt="Duke of Edinburgh Certificate" class="cert-thumb">
+                        <div class="cert-body">
+                            <div class="cert-title">International Bronze Award</div>
+                            <div class="cert-issuer">Duke of Edinburgh</div>
+                            <div class="cert-date">2022</div>
+                        </div>
+                    </a>
+
+                    <!-- Add more cert-card blocks here as needed -->
+
+                </div>
+            </div><!-- /Row 2 -->
+
         </div>
     </section>
 
@@ -210,7 +273,6 @@
                         PolyU Photonics Lab | June 2026 - Present
                     </div>
 
-                    <!-- Headline metrics for the role -->
                     <div class="metrics-grid">
                         <div>
                             <span class="metric-big">PV Cells Efficiency Testing</span>
@@ -218,20 +280,20 @@
                         </div>
                         <div>
                             <span class="metric-big">Semiconductor Fabrication</span>
-                            <span class="metric-desc">Got Exposure to Different Fabrication Techniques for PV</span>
+                            <span class="metric-desc">Exposure to Different Fabrication Techniques for PV</span>
                         </div>
                     </div>
 
                     <div class="chip-group">
-                        <div class="chip"><i class="ri-flashlight-line"></i>Photovoltaics</div>
+                        <div class="chip"><i class="ri-flashlight-line"></i> Photovoltaics</div>
                         <div class="chip"><i class="ri-cpu-line"></i> MATLAB/Simulink</div>
-                        <div class="chip"><i class="ri-pulse-line"></i>Python Programming</div>
+                        <div class="chip"><i class="ri-pulse-line"></i> Python Programming</div>
                         <div class="chip"><i class="ri-settings-4-line"></i> Raspberry Pi</div>
                         <div class="chip"><i class="ri-code-s-slash-line"></i> Sensor Testing &amp; Calibration</div>
                     </div>
                 </article>
 
-                <!-- Previous role: Research Assistant -->
+                <!-- UG Research Assistant -->
                 <article class="card">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                         <h4 class="highlight">UG Research Assistant</h4>
@@ -247,7 +309,7 @@
                     </div>
                 </article>
 
-                <!-- Previous role: EE Trainee -->
+                <!-- EE Trainee -->
                 <article class="card">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                         <h4 class="highlight">Electrical Engineering Trainee</h4>
@@ -263,7 +325,7 @@
                     </div>
                 </article>
 
-                <!-- Previous role: Design Intern -->
+                <!-- Design Intern -->
                 <article class="card">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                         <h4 class="highlight">HYR</h4>
@@ -277,7 +339,7 @@
                     </div>
                 </article>
 
-                <!-- Previous role: Software Intern -->
+                <!-- Software Intern -->
                 <article class="card">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                         <h4 class="highlight">Century Innovation Labs</h4>
@@ -298,9 +360,68 @@
 
 
     <!-- =========================================================
+         VOLUNTEERING
+          Uses vol-card style
+         (left cyan border accent) in a 3-column grid.
+         → Add/remove .vol-card blocks as needed.
+    ========================================================== -->
+    <section id="volunteering" class="section-pad">
+        <div class="container">
+            <div class="section-head">
+                <span class="line-num">//</span>
+                <span>Volunteering</span>
+            </div>
+
+            <div class="grid-3">
+
+                <!-- EES PolyU -->
+                <article class="card vol-card">
+                    <div class="vol-org">PolyU Engineering and Entreprenourship Society</div>
+                    <div class="vol-role">Senior Member</div>
+                    <div class="vol-date">Sep 2024 – May 2025</div>
+                    <p class="vol-desc">Organised workshops for Arduino and C++ Programming as well as Solidworks CAD for PolyU students. Developed a prototype for Underwater Robotics Team.</p>
+                    <div class="chip-group">
+                        <div class="chip">Arduino</div>
+                        <div class="chip">C++</div>
+                        <div class="chip">Solidworks</div>
+                    </div>
+                </article>
+
+                <!-- HCSG PolyU -->
+                <article class="card vol-card">
+                    <div class="vol-org">Halls Community Service Group PolyU</div>
+                    <div class="vol-role">Internal Vice President</div>
+                    <div class="vol-date">Sep 2024 – May 2025</div>
+                    <p class="vol-desc">Organized 4 workshops regarding community service and sustainability. Student made gifts for hall staff, sustainable perfumes, and did charity for Palestine.</p>
+                    <div class="chip-group">
+                        <div class="chip">Event Planning & Management</div>
+                        <div class="chip">People Management</div>
+                    </div>
+                </article>
+
+                <!-- GDG PolyU -->
+                <article class="card vol-card">
+                    <div class="vol-org">Google Developers Group PolyU</div>
+                    <div class="vol-role">Technical Lead</div>
+                    <div class="vol-date">Sep 2024 – Aug 2025</div>
+                    <p class="vol-desc">Delivered hands-on electronics and coding sessions to 200+PolyU students from different background, both technical and non-technical, to promote STEM knowledge.</p>
+                    <div class="chip-group">
+                        <div class="chip">Teaching</div>
+                        <div class="chip">Coding</div>
+                        <div class="chip">Electronics</div>
+                    </div>
+                </article>
+
+                <!-- Add more vol-card blocks here -->
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
          PROJECTS
          Clickable cards linking to GitHub repos or demo videos.
-         Each card: thumbnail → title → description → tech stack.
     ========================================================== -->
     <section id="projects" class="section-pad">
         <div class="container">
@@ -311,139 +432,75 @@
 
             <div class="grid-3">
 
-                <!-- Power Transmission Simulation -->
                 <a href="https://github.com/mairaj-02/power_transmission_simulation" target="_blank" class="project-card">
                     <img src="/sources/power_trans.png" alt="Power Transmission" class="p-img">
                     <div class="p-content">
-                        <div class="p-title">
-                            <span>Power Transmission Simulation</span>
-                            <i class="ri-external-link-line highlight"></i>
-                        </div>
+                        <div class="p-title"><span>Power Transmission Simulation</span><i class="ri-external-link-line highlight"></i></div>
                         <p class="p-desc">Load flow and fault analysis on a 19-bus 132kV system using PowerWorld Simulator to evaluate stability and contingency.</p>
-                        <div class="spec-row">
-                            <span>PowerWorld</span>
-                            <span>Load Flow</span>
-                            <span>Stability</span>
-                        </div>
+                        <div class="spec-row"><span>PowerWorld</span><span>Load Flow</span><span>Stability</span></div>
                     </div>
                 </a>
 
-                <!-- Line-Following Robot -->
                 <a href="https://youtube.com/shorts/3ivqIc-HEKQ?feature=share" target="_blank" class="project-card">
                     <img src="/sources/Line_following_robot.png" alt="Analog Robot" class="p-img">
                     <div class="p-content">
-                        <div class="p-title">
-                            <span>Line-Following Robot</span>
-                            <i class="ri-external-link-line highlight"></i>
-                        </div>
+                        <div class="p-title"><span>Line-Following Robot</span><i class="ri-external-link-line highlight"></i></div>
                         <p class="p-desc">Pure analog autonomous vehicle using closed-loop feedback control.</p>
-                        <div class="spec-row">
-                            <span>LM393 Comparator</span>
-                            <span>LDR Sensors</span>
-                            <span>DC Motors</span>
-                        </div>
+                        <div class="spec-row"><span>LM393 Comparator</span><span>LDR Sensors</span><span>DC Motors</span></div>
                     </div>
                 </a>
 
-                <!-- 3-Phase Brushless PMG -->
                 <a href="https://drive.google.com/drive/folders/1sl5pnn2XzJJ7B6lYp_t9BOTHmSJblQsv?usp=sharing" target="_blank" class="project-card">
                     <img src="/sources/generator.png" alt="Generator" class="p-img">
                     <div class="p-content">
-                        <div class="p-title">
-                            <span>3-Phase Brushless PMG</span>
-                            <i class="ri-external-link-line highlight"></i>
-                        </div>
+                        <div class="p-title"><span>3-Phase Brushless PMG</span><i class="ri-external-link-line highlight"></i></div>
                         <p class="p-desc">Permanent Magnet Generator design with real-time monitoring.</p>
-                        <div class="spec-row">
-                            <span>Arduino</span>
-                            <span>INA219</span>
-                            <span>Stator/Rotor</span>
-                        </div>
+                        <div class="spec-row"><span>Arduino</span><span>INA219</span><span>Stator/Rotor</span></div>
                     </div>
                 </a>
 
-                <!-- EV Car Park MEP -->
                 <a href="https://github.com/mairaj-02/MEP-design" target="_blank" class="project-card">
                     <img src="/sources/MEP.png" alt="EV Design" class="p-img">
                     <div class="p-content">
-                        <div class="p-title">
-                            <span>EV Car Park MEP</span>
-                            <i class="ri-external-link-line highlight"></i>
-                        </div>
+                        <div class="p-title"><span>EV Car Park MEP</span><i class="ri-external-link-line highlight"></i></div>
                         <p class="p-desc">Complete electrical distribution &amp; safety layout design.</p>
-                        <div class="spec-row">
-                            <span>AutoCAD</span>
-                            <span>Ventilation</span>
-                            <span>Load Calc</span>
-                        </div>
+                        <div class="spec-row"><span>AutoCAD</span><span>Ventilation</span><span>Load Calc</span></div>
                     </div>
                 </a>
 
-                <!-- PolyU GUR Course Reviews Platform -->
                 <a href="https://github.com/mairaj-02/polyu-course-review" target="_blank" class="project-card">
                     <img src="/sources/polyu-gur.png" alt="GUR Platform" class="p-img">
                     <div class="p-content">
-                        <div class="p-title">
-                            <span>PolyU GUR Course Reviews</span>
-                            <i class="ri-external-link-line highlight"></i>
-                        </div>
+                        <div class="p-title"><span>PolyU GUR Course Reviews</span><i class="ri-external-link-line highlight"></i></div>
                         <p class="p-desc">Full-stack web platform for students to discover, review, and rate GUR courses.</p>
-                        <div class="spec-row">
-                            <span>Flask</span>
-                            <span>SQLite</span>
-                            <span>Bootstrap 5</span>
-                        </div>
+                        <div class="spec-row"><span>Flask</span><span>SQLite</span><span>Bootstrap 5</span></div>
                     </div>
                 </a>
 
-                <!-- Python Signal Processing -->
                 <a href="https://youtu.be/r4CCsiNiPcY" target="_blank" class="project-card">
                     <img src="/sources/python_signal_processing.jpeg" alt="Signal Processing" class="p-img">
                     <div class="p-content">
-                        <div class="p-title">
-                            <span>Python Signal Processing</span>
-                            <i class="ri-external-link-line highlight"></i>
-                        </div>
-                        <p class="p-desc">A CLI program in Python that converts images to ASCII art and normal audio to robotic audio.</p>
-                        <div class="spec-row">
-                            <span>Python</span>
-                            <span>OpenCV</span>
-                            <span>OOP</span>
-                        </div>
+                        <div class="p-title"><span>Python Signal Processing</span><i class="ri-external-link-line highlight"></i></div>
+                        <p class="p-desc">A CLI program that converts images to ASCII art and normal audio to robotic audio.</p>
+                        <div class="spec-row"><span>Python</span><span>OpenCV</span><span>OOP</span></div>
                     </div>
                 </a>
 
-                <!-- Job Tracker Platform -->
                 <a href="https://youtu.be/W3DE77FCuYs" target="_blank" class="project-card">
                     <img src="/sources/job-tracker.png" alt="Job Tracker" class="p-img">
                     <div class="p-content">
-                        <div class="p-title">
-                            <span>Job Tracker Platform</span>
-                            <i class="ri-external-link-line highlight"></i>
-                        </div>
+                        <div class="p-title"><span>Job Tracker Platform</span><i class="ri-external-link-line highlight"></i></div>
                         <p class="p-desc">Full-stack app to manage job applications, deadlines, and status tracking.</p>
-                        <div class="spec-row">
-                            <span>Flask</span>
-                            <span>JavaScript</span>
-                            <span>Responsive UI</span>
-                        </div>
+                        <div class="spec-row"><span>Flask</span><span>JavaScript</span><span>Responsive UI</span></div>
                     </div>
                 </a>
 
-                <!-- Finance Portfolio -->
                 <a href="https://github.com/mairaj-02/finance_portfolio" target="_blank" class="project-card">
                     <img src="/sources/finance.png" alt="Finance" class="p-img">
                     <div class="p-content">
-                        <div class="p-title">
-                            <span>Finance Portfolio</span>
-                            <i class="ri-external-link-line highlight"></i>
-                        </div>
+                        <div class="p-title"><span>Finance Portfolio</span><i class="ri-external-link-line highlight"></i></div>
                         <p class="p-desc">Secure stock trading simulator with real-time quotes and portfolio management.</p>
-                        <div class="spec-row">
-                            <span>Python</span>
-                            <span>Stock API</span>
-                            <span>SQL Database</span>
-                        </div>
+                        <div class="spec-row"><span>Python</span><span>Stock API</span><span>SQL Database</span></div>
                     </div>
                 </a>
 
@@ -454,8 +511,7 @@
 
     <!-- =========================================================
          SKILLS
-         Grouped by domain; each group is a .skill-wrapper with
-         an icon header and an auto-filling pill grid.
+         Grouped by domain; each group is a .skill-wrapper.
     ========================================================== -->
     <section id="skills" class="section-pad">
         <div class="container">
@@ -466,12 +522,8 @@
 
             <div class="grid-2">
 
-                <!-- Electrical Engineering Core -->
                 <div class="skill-wrapper">
-                    <div class="skill-header">
-                        <i class="ri-flashlight-fill"></i>
-                        <h3>Electrical Engineering</h3>
-                    </div>
+                    <div class="skill-header"><i class="ri-flashlight-fill"></i><h3>Electrical Engineering</h3></div>
                     <div class="skill-grid">
                         <div class="skill-pill">Power Flow Analysis</div>
                         <div class="skill-pill">Short-Circuit Analysis</div>
@@ -487,12 +539,8 @@
                     </div>
                 </div>
 
-                <!-- Embedded & Automation -->
                 <div class="skill-wrapper">
-                    <div class="skill-header">
-                        <i class="ri-cpu-line"></i>
-                        <h3>Embedded &amp; Automation</h3>
-                    </div>
+                    <div class="skill-header"><i class="ri-cpu-line"></i><h3>Embedded &amp; Automation</h3></div>
                     <div class="skill-grid">
                         <div class="skill-pill">PLC Programming</div>
                         <div class="skill-pill">Arduino</div>
@@ -503,12 +551,8 @@
                     </div>
                 </div>
 
-                <!-- Languages & Frameworks -->
                 <div class="skill-wrapper">
-                    <div class="skill-header">
-                        <i class="ri-code-s-slash-line"></i>
-                        <h3>Languages &amp; Frameworks</h3>
-                    </div>
+                    <div class="skill-header"><i class="ri-code-s-slash-line"></i><h3>Languages &amp; Frameworks</h3></div>
                     <div class="skill-grid">
                         <div class="skill-pill">Python</div>
                         <div class="skill-pill">Object Oriented Programming</div>
@@ -524,12 +568,8 @@
                     </div>
                 </div>
 
-                <!-- Software & Lab Tools -->
                 <div class="skill-wrapper">
-                    <div class="skill-header">
-                        <i class="ri-tools-line"></i>
-                        <h3>Software &amp; Lab Tools</h3>
-                    </div>
+                    <div class="skill-header"><i class="ri-tools-line"></i><h3>Software &amp; Lab Tools</h3></div>
                     <div class="skill-grid">
                         <div class="skill-pill">PowerWorld Simulator</div>
                         <div class="skill-pill">MATLAB</div>
@@ -545,12 +585,8 @@
                     </div>
                 </div>
 
-                <!-- Soft Skills -->
                 <div class="skill-wrapper">
-                    <div class="skill-header">
-                        <i class="ri-team-line"></i>
-                        <h3>Soft Skills</h3>
-                    </div>
+                    <div class="skill-header"><i class="ri-team-line"></i><h3>Soft Skills</h3></div>
                     <div class="skill-grid">
                         <div class="skill-pill">Problem Solving</div>
                         <div class="skill-pill">Teamwork</div>
@@ -568,8 +604,7 @@
 
     <!-- =========================================================
          FOOTER
-         Contact links + CV download button.
-         Note: Update the CV href below when the file path changes.
+         Contact links + CV button (opens in new tab).
     ========================================================== -->
     <footer>
         <div class="container">
@@ -587,18 +622,15 @@
                 </a>
             </div>
 
-            <!-- CV download — update href to match the actual PDF path -->
+            <!-- Opens CV in a new tab so recruiters can read it first, then download -->
             <div class="footer-actions">
-                <a href="/sources/Muhammad_Mairaj_CV.pdf" class="btn-download" download>
-                    <i class="ri-download-cloud-2-line"></i> Curriculum Vitae
+                <a href="/sources/Muhammad_Mairaj_CV.pdf" target="_blank" class="btn-download">
+                    <i class="ri-file-user-line"></i> View Curriculum Vitae
                 </a>
             </div>
         </div>
     </footer>
 
-    <!-- === JAVASCRIPT ===
-         main.js handles any runtime behaviour (currently none needed
-         since the site is pure HTML/CSS). Add interactivity there. -->
     <script src="js/main.js"></script>
 
 </body>
