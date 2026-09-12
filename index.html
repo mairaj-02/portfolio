@@ -43,39 +43,34 @@
          Full-width intro: name, title, specialty chips, and stats.
     ========================================================== -->
     <header>
-        <div class="container hero-flex">
+        <div class="container">
 
-            <!-- Left: Name, title, and specialty tags -->
-            <div class="hero-main">
-                <div class="mono highlight">// INTRODUCTION</div>
-                <h1>
-                    Electrical<br>
-                    &amp; Software<br>
-                    <span class="text-dim">Engineer &#128511;</span>
-                </h1>
-                <h2>Muhammad Mairaj | PolyU</h2>
-                <div class="chip-group" style="margin-top: 1.5rem;">
-                    <div class="chip"><i class="ri-flashlight-line"></i> Power Systems</div>
-                    <div class="chip"><i class="ri-cpu-line"></i> Power Electronics &amp; Control</div>
-                    <div class="chip"><i class="ri-pulse-line"></i> Signal Processing</div>
-                    <div class="chip"><i class="ri-broadcast-line"></i> Embedded Systems</div>
+            <div class="video-hero">
+                <video class="video-hero-media" autoplay muted loop playsinline poster="/sources/actual_pcb.png">
+                    <source src="/sources/header_vid.mp4" type="video/mp4">
+                </video>
+                <div class="video-hero-overlay">
+                    <h1 class="video-hero-name">Muhammad Mairaj</h1>
+                    <h1 class="video-hero-tag">Electrical &amp; Software Eng Portfolio</h1>
                 </div>
             </div>
-
-            <!-- Right: Key academic stats -->
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-num">3.73</span>
-                    <span class="stat-label">CGPA</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">Dean's List</span>
-                    <span class="stat-label">EEE Dept.</span>
-                </div>
+ 
+            <p class="hero-welcome">Thanks for checking out my portfolio! Whether you&rsquo;re a recruiter, fellow engineer, friend, or lost stranger, I hope you enjoy the ride.</p>
+ 
+            <h3 class="hero-facts-heading mono highlight">Some Fun Facts and Gentle Intro</h3>
+ 
+            <div class="hero-facts-text">
+                <p>I started as a <span class="kw">Physics</span> undergrad. I liked <span class="kw">electromagnetism</span>, so I switched to <span class="kw">EE</span>. When I joined EE, I really liked <span class="kw">power engineering</span>, but a professor pointed me towards where power is actually heading, which pulled me towards <span class="kw">power electronics</span> and its control topologies &mdash; modern power systems lean more and more on <span class="kw">renewables</span>. Getting into power electronics got me <span class="kw">designing PCBs</span>, which pulled me into <span class="kw">embedded systems</span> and how useful they are across different fields. Since that needed programming and software knowledge, I started <span class="kw">learning to code</span> with online resources, and I still learn and code for fun on the side. Right now, after my internship at Hong Kong Electric, I'm learning  more about <span class="kw">data science and AI</span>.</p>
+ 
+                <p>Outside of studies, I play <span class="kw">squash for PolyU</span> at the university level, and have somehow kept my <span class="kw">GPA above 3.7</span> through all of it. I was also awarded the <span class="kw">Hong Kong Talent Development Scholarship</span>.</p>
+                
+                <p> I'm a big YouTube nerd too &mdash; I love bingewatching techy videos, and some of my favourites are Phil's Lab, ElectrArc 240, Veritasium, ThePrimeagen, and Fern.</p>
             </div>
 
+ 
         </div>
     </header>
+
 
 
     <!-- =========================================================
@@ -96,35 +91,25 @@
                 <article class="card">
                     <h3 style="margin-bottom: 0.5rem;">The Hong Kong Polytechnic University</h3>
                     <div class="mono text-dim" style="margin-bottom: 1.5rem;">BEng (Hons) Electrical Engineering | 2023 - 2027</div>
-                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center;">
-                        <div class="chip">Full Ride Entry Scholarship</div>
-                        <div class="chip">PolyU Men's Squash Team</div>
-                    </div>
 
-                    <h4 class="mono text-dim" style="margin-bottom: 1rem;">// RELEVANT COURSEWORK</h4>
-
+                    <h4 class="mono text-dim" style="margin-bottom: 1rem;">Some of my Favourite Courses</h4>
                     <!-- Scrollable grade list; see components.css → .coursework-list -->
                     <div class="coursework-list">
-                        <div class="grade-row"><span>Power Transmission &amp; Distribution</span>   <span class="grade-score excellent">A+</span></div>
+                        <div class="grade-row"><span>Power Transmission &amp; Distribution</span>    <span class="grade-score excellent">A+</span></div>
                         <div class="grade-row"><span>Power Electronics &amp; Drives</span>           <span class="grade-score excellent">A+</span></div>
-                        <div class="grade-row"><span>Electrical Services in Buildings</span>         <span class="grade-score excellent">A+</span></div>
-                        <div class="grade-row"><span>Digital Control Systems</span>                  <span class="grade-score excellent">A+</span></div>
-                        <div class="grade-row"><span>Industrial Computer Applications</span>         <span class="grade-score excellent">A+</span></div>
                         <div class="grade-row"><span>Circuits Analysis</span>                        <span class="grade-score excellent">A+</span></div>
-                        <div class="grade-row"><span>Analog &amp; Digital Circuits</span>            <span class="grade-score excellent">A+</span></div>
                         <div class="grade-row"><span>Linear Systems &amp; Signal Processing</span>   <span class="grade-score excellent">A+</span></div>
-                        <div class="grade-row"><span>Electromechanical Energy Conversion</span>      <span class="grade-score excellent">A+</span></div>
+                        <div class="grade-row"><span>Electric Machines</span>                        <span class="grade-score excellent">A+</span></div>
                         <div class="grade-row"><span>Electronics</span>                              <span class="grade-score">A</span></div>
                         <div class="grade-row"><span>Systems &amp; Control</span>                    <span class="grade-score">A</span></div>
                         <div class="grade-row"><span>Computer Systems</span>                         <span class="grade-score">A</span></div>
-                        <div class="grade-row"><span>Applied Electromagnetics</span>                 <span class="grade-score">A</span></div>
                     </div>
                 </article>
 
                 <!-- Overseas Learning -->
                 <article class="card" style="padding: 1.5rem;">
                     <h4 style="margin-bottom: 1.5rem;">
-                        <i class="ri-global-line highlight"></i> Overseas Learning
+                        <i class="ri-global-line highlight"></i> SIDE QUESTS
                     </h4>
                     <div class="grid-2" style="gap: 1rem;">
 
@@ -168,123 +153,111 @@
                     </div>
                 </article>
 
-            </div><!-- /Row 1 -->
+            </div>
 
-            <!-- Row 2: Certifications (full-width, 3-column card grid) -->
-            <div>
-                <h3 class="mono text-dim" style="margin-bottom: 1.5rem; font-size: 1rem;">// CERTIFICATIONS &amp; AWARDS</h3>
-
-                <!-- Each cert-card opens the certificate file in a new tab. -->
-
-                <div class="grid-3">
-
-                    <!-- Harvard CS50X -->
-                    <a href="/sources/CS50x.pdf" target="_blank" class="cert-card">
-                        <img src="/sources/cs50x_thumb.png" alt="cs50x" class="cert-thumb">
-                        <div class="cert-body">
-                            <div class="cert-title">Introduction to Computer Science</div>
-                            <div class="cert-issuer">Harvard's CS50X</div>
-                            <div class="cert-date">2024</div>
-                        </div>
-                    </a>
-
-                    <!-- Harvard CS50P -->
-                    <a href="/sources/CS50p.pdf" target="_blank" class="cert-card">
-                        <img src="/sources/cs50p_thumb.jpeg" alt="cs50 python" class="cert-thumb">
-                        <div class="cert-body">
-                            <div class="cert-title">Programming with Python</div>
-                            <div class="cert-issuer">Harvard's CS50P</div>
-                            <div class="cert-date">2026</div>
-                        </div>
-                    </a>
-
-                    <!-- Harvard CS50T -->
-                    <a href="/sources/CS50t.pdf" target="_blank" class="cert-card">
-                        <img src="/sources/cs50t_thumb.jpeg" alt="cs50 tech" class="cert-thumb">
-                        <div class="cert-body">
-                            <div class="cert-title">Understanding Technology</div>
-                            <div class="cert-issuer">Harvard's CS50T</div>
-                            <div class="cert-date">2024</div>
-                        </div>
-                    </a>
-
-                    <!-- IBM Hardware & OS -->
-                    <a href="/sources/IBM_Hardware_OS_Cert.pdf" target="_blank" class="cert-card">
-                        <img src="/sources/ibm_thumb.png" alt="IBM Cert" class="cert-thumb">
-                        <div class="cert-body">
-                            <div class="cert-title">Hardware &amp; Operating System Support</div>
-                            <div class="cert-issuer">IBM</div>
-                            <div class="cert-date">2024</div>
-                        </div>
-                    </a>
-
-                    <!-- Gold Medal -->
-                    <a href="/sources/gold_medal.pdf" target="_blank" class="cert-card">
-                        <img src="/sources/gold_medal_thumb.jpeg" alt="Gold Medal" class="cert-thumb">
-                        <div class="cert-body">
-                            <div class="cert-title">Gold Medal — 94% in HSSC Examinations</div>
-                            <div class="cert-issuer">Board of Intermediate Education</div>
-                            <div class="cert-date">2023</div>
-                        </div>
-                    </a>
-
-                    <!-- Duke of Edinburgh -->
-                    <a href="/sources/doe_cert.pdf" target="_blank" class="cert-card">
-                        <img src="/sources/doe_thumb.png" alt="Duke of Edinburgh Certificate" class="cert-thumb">
-                        <div class="cert-body">
-                            <div class="cert-title">International Bronze Award</div>
-                            <div class="cert-issuer">Duke of Edinburgh</div>
-                            <div class="cert-date">2022</div>
-                        </div>
-                    </a>
-
-                    <!-- Add more cert-card blocks here as needed -->
-
+                        <!-- How I Learned to Code -->
+            <article class="card">
+                <h4 style="margin-bottom: 1.5rem;">
+                    <i class="ri-terminal-box-line highlight"></i> How I Learnt Programming
+                </h4>
+                <div class="grid-3" style="gap: 1rem;">
+ 
+                    <div class="module-card">
+                        <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-shapes-line"></i> CS50 Scratch</div>
+                        <p>Intro to Programming with Scratch</p>
+                        <a href="/sources/CS50_Scratch.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary); margin-top: 0.75rem;">
+                        <i class="ri-external-link-line"></i> View Certificate
+                        </a>
+                    </div>
+ 
+                    <div class="module-card">
+                        <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-lightbulb-line"></i> CS50T</div>
+                        <p>Understanding Technology</p>
+                        <a href="/sources/CS50t.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary); margin-top: 0.75rem;">
+                            <i class="ri-external-link-line"></i> View Certificate
+                        </a>
+                    </div>
+ 
+                    <div class="module-card">
+                        <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-code-box-line"></i> CS50x</div>
+                        <p>Introduction to Computer Science</p>
+                        <a href="/sources/CS50x.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary); margin-top: 0.75rem;">
+                            <i class="ri-external-link-line"></i> View Certificate
+                        </a>
+                    </div>
+ 
+                    <div class="module-card">
+                        <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-code-s-slash-line"></i> CS50P</div>
+                        <p>Programming with Python</p>
+                        <a href="/sources/CS50p.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary); margin-top: 0.75rem;">
+                            <i class="ri-external-link-line"></i> View Certificate
+                        </a>
+                    </div>
+ 
+                    <div class="module-card">
+                        <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-book-open-line"></i> Algorithms</div>
+                        <p>The Last Algorithms Course You'll Need &mdash; ThePrimeagen, Frontend Masters</p>
+                    </div>
+ 
                 </div>
-            </div><!-- /Row 2 -->
+            </article>
 
-        </div>
-    </section>
-
-
-    <!-- =========================================================
+     <!-- =========================================================
          EXPERIENCE
-         Featured current role + previous roles in a 2-column grid.
+         Full-width, 2-column card grid.
+         → Add/remove .card blocks as needed.
     ========================================================== -->
+
     <section id="experience" class="section-pad">
         <div class="container">
             <div class="section-head">
                 <span class="line-num">//</span>
-                <span>Experience</span>
+                <span>Work in Industry and Research</span>
             </div>
 
             <div class="grid-2">
 
                 <!-- Featured role: spans full 2-column width -->
                 <article class="card featured-card">
-                    <div class="role-badge">Research &amp; Development</div>
-                    <h3>Research Assistant</h3>
+                    <div class="role-badge">Power Systems</div>
+                    <h3>Engineer Intern</h3>
                     <div class="mono text-dim" style="margin-bottom: 1.5rem;">
-                        PolyU Photonics Lab | June 2026 - Present
+                        Hong Kong Electric | Jul 2026 - Aug 2026
                     </div>
 
                     <div class="metrics-grid">
                         <div>
-                            <span class="metric-big">PV Cells Efficiency Testing</span>
-                            <span class="metric-desc">Testing Across Extreme Conditions</span>
+                            <span class="metric-big">Cable Health Diagnosis</span>
+                            <span class="metric-desc">Exposure to various cable testing methods</span>
                         </div>
                         <div>
-                            <span class="metric-big">Semiconductor Fabrication</span>
-                            <span class="metric-desc">Exposure to Different Fabrication Techniques for PV</span>
+                            <span class="metric-big">Machine Learning</span>
+                            <span class="metric-desc">Developed ML based health indexing system</span>
                         </div>
                     </div>
 
                     <div class="chip-group">
-                        <div class="chip"><i class="ri-flashlight-line"></i> Photovoltaics</div>
-                        <div class="chip"><i class="ri-cpu-line"></i> MATLAB/Simulink</div>
-                        <div class="chip"><i class="ri-pulse-line"></i> Python Programming</div>
-                        <div class="chip"><i class="ri-settings-4-line"></i> Raspberry Pi</div>
-                        <div class="chip"><i class="ri-code-s-slash-line"></i> Sensor Testing &amp; Calibration</div>
+                        <div class="chip">Technical Documentation</div>
+                        <div class="chip">MS Power Apps</div>
+                        <div class="chip">Machine Learning (XGBoost)</div>
+                        <div class="chip">Exploratory Data Analytics</div>
+                        <div class="chip">Python</div>
+                    </div>
+                </article>
+
+                <!-- UG Research Assistant -->
+                 <article class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <h4 class="highlight">UG Research Assistant</h4>
+                        <span class="mono text-dim">2026</span>
+                    </div>
+                    <div class="mono text-dim" style="margin-bottom: 1rem;">Research on PV Cells</div>
+                    <div class="chip-group">
+                        <div class="chip">PCB Design</div>
+                        <div class="chip">Solidworks</div>
+                        <div class="chip">MATLAB</div>
+                        <div class="chip">Arduino</div>
+                        <div class="chip">C++</div>
                     </div>
                 </article>
 
@@ -353,6 +326,76 @@
         </div>
     </section>
 
+     <!-- =========================================================
+         PROJECTS
+         Clickable cards linking to GitHub repos or demo videos.
+    ========================================================== -->
+    <section id="projects" class="section-pad">
+        <div class="container">
+            <div class="section-head">
+                <span class="line-num">//</span>
+                <span>Somethings Outside Class</span>
+            </div>
+
+            <div class="grid-3">
+
+                <a href="https://github.com/mairaj-02/Buck_Converter" target="_blank" class="project-card">
+                    <img src="/sources/actual_pcb.png" alt="15W Buck Converter" class="p-img">
+                    <div class="p-content">
+                        <div class="p-title"><span>15W Buck Converter</span><i class="ri-external-link-line highlight"></i></div>
+                        <p class="p-desc">Design and implementation of a 15W buck converter for efficient power conversion.</p>
+                        <div class="spec-row"><span>KiCAD</span><span>LTSpice</span><span>PCB Design</span></div>
+                    </div>
+                </a>
+
+                <a href="https://youtube.com/shorts/3ivqIc-HEKQ?feature=share" target="_blank" class="project-card">
+                    <img src="/sources/Line_following_robot.png" alt="Analog Robot" class="p-img">
+                    <div class="p-content">
+                        <div class="p-title"><span>Line-Following Robot</span><i class="ri-external-link-line highlight"></i></div>
+                        <p class="p-desc">Pure analog autonomous vehicle using closed-loop feedback control.</p>
+                        <div class="spec-row"><span>LM393 Comparator</span><span>LDR Sensors</span><span>DC Motors</span></div>
+                    </div>
+                </a>
+
+                <a href="https://drive.google.com/drive/folders/1sl5pnn2XzJJ7B6lYp_t9BOTHmSJblQsv?usp=sharing" target="_blank" class="project-card">
+                    <img src="/sources/generator.png" alt="Generator" class="p-img">
+                    <div class="p-content">
+                        <div class="p-title"><span>3-Phase Brushless PMG</span><i class="ri-external-link-line highlight"></i></div>
+                        <p class="p-desc">Permanent Magnet Generator design with real-time monitoring.</p>
+                        <div class="spec-row"><span>Arduino</span><span>INA219</span><span>Stator/Rotor</span></div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/mairaj-02/polyu-course-review" target="_blank" class="project-card">
+                    <img src="/sources/polyu-gur.png" alt="GUR Platform" class="p-img">
+                    <div class="p-content">
+                        <div class="p-title"><span>PolyU GUR Course Reviews</span><i class="ri-external-link-line highlight"></i></div>
+                        <p class="p-desc">Full-stack web platform for students to discover, review, and rate GUR courses.</p>
+                        <div class="spec-row"><span>Flask</span><span>SQLite</span><span>Bootstrap 5</span></div>
+                    </div>
+                </a>
+
+                <a href="https://youtu.be/W3DE77FCuYs" target="_blank" class="project-card">
+                    <img src="/sources/job-tracker.png" alt="Job Tracker" class="p-img">
+                    <div class="p-content">
+                        <div class="p-title"><span>Job Tracker Platform</span><i class="ri-external-link-line highlight"></i></div>
+                        <p class="p-desc">Full-stack app to manage job applications, deadlines, and status tracking.</p>
+                        <div class="spec-row"><span>Flask</span><span>JavaScript</span><span>Responsive UI</span></div>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=WoGf7QEE9P0&t=74s" target="_blank" class="project-card">
+                    <img src="/sources/gonio.png" alt="Goniometer" class="p-img">
+                    <div class="p-content">
+                        <div class="p-title"><span>Amateur Goniometer</span><i class="ri-external-link-line highlight"></i></div>
+                        <p class="p-desc">A rotating robotic arm for measuring power generated by PV cells at various angles.</p>
+                        <div class="spec-row"><span>PCB Design</span><span>Solidworks</span><span>BambooLab</span></div>
+                    </div>
+                </a>
+
+            </div><!-- /grid-3 -->
+        </div>
+    </section>
 
     <!-- =========================================================
          VOLUNTEERING
@@ -364,7 +407,7 @@
         <div class="container">
             <div class="section-head">
                 <span class="line-num">//</span>
-                <span>Volunteering</span>
+                <span>Uni Club and Societies</span>
             </div>
 
             <div class="grid-3">
@@ -415,96 +458,6 @@
 
 
     <!-- =========================================================
-         PROJECTS
-         Clickable cards linking to GitHub repos or demo videos.
-    ========================================================== -->
-    <section id="projects" class="section-pad">
-        <div class="container">
-            <div class="section-head">
-                <span class="line-num">//</span>
-                <span>Engineering Projects</span>
-            </div>
-
-            <div class="grid-3">
-
-                <a href="https://github.com/mairaj-02/power_transmission_simulation" target="_blank" class="project-card">
-                    <img src="/sources/power_trans.png" alt="Power Transmission" class="p-img">
-                    <div class="p-content">
-                        <div class="p-title"><span>Power Transmission Simulation</span><i class="ri-external-link-line highlight"></i></div>
-                        <p class="p-desc">Load flow and fault analysis on a 19-bus 132kV system using PowerWorld Simulator to evaluate stability and contingency.</p>
-                        <div class="spec-row"><span>PowerWorld</span><span>Load Flow</span><span>Stability</span></div>
-                    </div>
-                </a>
-
-                <a href="https://youtube.com/shorts/3ivqIc-HEKQ?feature=share" target="_blank" class="project-card">
-                    <img src="/sources/Line_following_robot.png" alt="Analog Robot" class="p-img">
-                    <div class="p-content">
-                        <div class="p-title"><span>Line-Following Robot</span><i class="ri-external-link-line highlight"></i></div>
-                        <p class="p-desc">Pure analog autonomous vehicle using closed-loop feedback control.</p>
-                        <div class="spec-row"><span>LM393 Comparator</span><span>LDR Sensors</span><span>DC Motors</span></div>
-                    </div>
-                </a>
-
-                <a href="https://drive.google.com/drive/folders/1sl5pnn2XzJJ7B6lYp_t9BOTHmSJblQsv?usp=sharing" target="_blank" class="project-card">
-                    <img src="/sources/generator.png" alt="Generator" class="p-img">
-                    <div class="p-content">
-                        <div class="p-title"><span>3-Phase Brushless PMG</span><i class="ri-external-link-line highlight"></i></div>
-                        <p class="p-desc">Permanent Magnet Generator design with real-time monitoring.</p>
-                        <div class="spec-row"><span>Arduino</span><span>INA219</span><span>Stator/Rotor</span></div>
-                    </div>
-                </a>
-
-                <a href="https://github.com/mairaj-02/MEP-design" target="_blank" class="project-card">
-                    <img src="/sources/MEP.png" alt="EV Design" class="p-img">
-                    <div class="p-content">
-                        <div class="p-title"><span>EV Car Park MEP</span><i class="ri-external-link-line highlight"></i></div>
-                        <p class="p-desc">Complete electrical distribution &amp; safety layout design.</p>
-                        <div class="spec-row"><span>AutoCAD</span><span>Ventilation</span><span>Load Calc</span></div>
-                    </div>
-                </a>
-
-                <a href="https://github.com/mairaj-02/polyu-course-review" target="_blank" class="project-card">
-                    <img src="/sources/polyu-gur.png" alt="GUR Platform" class="p-img">
-                    <div class="p-content">
-                        <div class="p-title"><span>PolyU GUR Course Reviews</span><i class="ri-external-link-line highlight"></i></div>
-                        <p class="p-desc">Full-stack web platform for students to discover, review, and rate GUR courses.</p>
-                        <div class="spec-row"><span>Flask</span><span>SQLite</span><span>Bootstrap 5</span></div>
-                    </div>
-                </a>
-
-                <a href="https://youtu.be/r4CCsiNiPcY" target="_blank" class="project-card">
-                    <img src="/sources/python_signal_processing.jpeg" alt="Signal Processing" class="p-img">
-                    <div class="p-content">
-                        <div class="p-title"><span>Python Signal Processing</span><i class="ri-external-link-line highlight"></i></div>
-                        <p class="p-desc">A CLI program that converts images to ASCII art and normal audio to robotic audio.</p>
-                        <div class="spec-row"><span>Python</span><span>OpenCV</span><span>OOP</span></div>
-                    </div>
-                </a>
-
-                <a href="https://youtu.be/W3DE77FCuYs" target="_blank" class="project-card">
-                    <img src="/sources/job-tracker.png" alt="Job Tracker" class="p-img">
-                    <div class="p-content">
-                        <div class="p-title"><span>Job Tracker Platform</span><i class="ri-external-link-line highlight"></i></div>
-                        <p class="p-desc">Full-stack app to manage job applications, deadlines, and status tracking.</p>
-                        <div class="spec-row"><span>Flask</span><span>JavaScript</span><span>Responsive UI</span></div>
-                    </div>
-                </a>
-
-                <a href="https://github.com/mairaj-02/finance_portfolio" target="_blank" class="project-card">
-                    <img src="/sources/finance.png" alt="Finance" class="p-img">
-                    <div class="p-content">
-                        <div class="p-title"><span>Finance Portfolio</span><i class="ri-external-link-line highlight"></i></div>
-                        <p class="p-desc">Secure stock trading simulator with real-time quotes and portfolio management.</p>
-                        <div class="spec-row"><span>Python</span><span>Stock API</span><span>SQL Database</span></div>
-                    </div>
-                </a>
-
-            </div><!-- /grid-3 -->
-        </div>
-    </section>
-
-
-    <!-- =========================================================
          SKILLS
          Grouped by domain; each group is a .skill-wrapper.
     ========================================================== -->
@@ -515,32 +468,31 @@
                 <span>Technical Arsenal</span>
             </div>
 
-            <div class="grid-2">
-
                 <div class="skill-wrapper">
                     <div class="skill-header"><i class="ri-flashlight-fill"></i><h3>Electrical Engineering</h3></div>
                     <div class="skill-grid">
-                        <div class="skill-pill">Power Flow Analysis</div>
-                        <div class="skill-pill">Short-Circuit Analysis</div>
+                        <div class="skill-pill">Load Flow Studies</div>
+                        <div class="skill-pill">Fault Analysis</div>
                         <div class="skill-pill">Transmission Line Modelling</div>
-                        <div class="skill-pill">Grid Stability Evaluation</div>
-                        <div class="skill-pill">Power Electronics</div>
-                        <div class="skill-pill">Electric Machinery</div>
-                        <div class="skill-pill">Circuit Analysis</div>
+                        <div class="skill-pill">Machine Design</div>
+                        <div class="skill-pill">Circuit Design &amp Analysis</div>
+                        <div class="skill-pill">System Modelling</div>
+                        <div class="skill-pill">Controller Design</div>
+                        <div class="skill-pill">Power Converter Design</div>
+                        <div class="skill-pill">Small Signal Analysis</div>
                         <div class="skill-pill">Signal Processing</div>
-                        <div class="skill-pill">Telecoms</div>
-                        <div class="skill-pill">LV Distribution</div>
-                        <div class="skill-pill">Panel Commissioning</div>
+                        <div class="skill-pill">Filter Design</div>
+                        <div class="skill-pill">Electrical Building Services Design</div>
                     </div>
                 </div>
 
                 <div class="skill-wrapper">
-                    <div class="skill-header"><i class="ri-cpu-line"></i><h3>Embedded &amp; Automation</h3></div>
+                    <div class="skill-header"><i class="ri-cpu-line"></i><h3>Embedded</h3></div>
                     <div class="skill-grid">
-                        <div class="skill-pill">PLC Programming</div>
+                        <div class="skill-pill">ESP32</div>
                         <div class="skill-pill">Arduino</div>
                         <div class="skill-pill">Raspberry Pi</div>
-                        <div class="skill-pill">KNX Automation</div>
+                        <div class="skill-pill">STM32</div>
                         <div class="skill-pill">PCB Design</div>
                         <div class="skill-pill">C/C++</div>
                     </div>
@@ -564,7 +516,7 @@
                 </div>
 
                 <div class="skill-wrapper">
-                    <div class="skill-header"><i class="ri-tools-line"></i><h3>Software &amp; Lab Tools</h3></div>
+                    <div class="skill-header"><i class="ri-tools-line"></i><h3>Engineering Tools</h3></div>
                     <div class="skill-grid">
                         <div class="skill-pill">PowerWorld Simulator</div>
                         <div class="skill-pill">MATLAB</div>
@@ -573,9 +525,9 @@
                         <div class="skill-pill">Figma</div>
                         <div class="skill-pill">Jupyter Notebook</div>
                         <div class="skill-pill">AutoCAD</div>
+                        <div class="skill-pill">DiaLux EVO</div>
                         <div class="skill-pill">SolidWorks</div>
                         <div class="skill-pill">LTSpice</div>
-                        <div class="skill-pill">Altium Designer</div>
                         <div class="skill-pill">PSIM</div>
                     </div>
                 </div>
@@ -592,7 +544,6 @@
                     </div>
                 </div>
 
-            </div><!-- /grid-2 -->
         </div>
     </section>
 
