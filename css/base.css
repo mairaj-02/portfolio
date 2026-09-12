@@ -77,3 +77,69 @@ h1, h2, h3 { font-weight: 700; text-transform: uppercase; letter-spacing: -0.5px
     font-family: var(--font-mono);
 }
 .line-num { color: var(--text-dim); font-size: 0.9rem; }
+
+        .video-hero {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 8;
+            max-height: 560px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        .video-hero-media {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .video-hero-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.75) 100%);
+        }
+        .video-hero-name {
+            color: #fff;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.05;
+            margin: 0;
+        }
+        .video-hero-tag {
+            color: rgba(255,255,255,0.85);
+            margin-top: 0.5rem;
+        }
+        .hero-welcome {
+            max-width: 60ch;
+            margin: 1.75rem auto 0;
+            text-align: center;
+            font-size: 1.05rem;
+        }
+        .hero-facts-heading {
+            text-align: center;
+            font-size: clamp(1.4rem, 2.6vw, 2rem);
+            margin: 2.5rem auto 1rem;
+            max-width: 900px;
+        }
+        .hero-facts-text {
+            max-width: 780px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+        .hero-facts-text p + p {
+            margin-top: 1rem;
+        }
+        .kw {
+            color: var(--primary, #00d9ff);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 500;
+        }
+        @media (max-width: 640px) {
+            .hero-facts { grid-template-columns: 1fr; }
+        }
+
