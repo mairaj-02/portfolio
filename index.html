@@ -11,10 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <!-- === STYLESHEETS (modular) ===
-         base.css       → tokens, reset, typography, layout utilities
-         components.css → cards, chips, skill pills, cert cards, vol cards, buttons
-         layout.css     → nav, hero, footer, responsive breakpoints       -->
+    <!-- === STYLESHEETS (modular) === -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -23,7 +20,6 @@
 
     <!-- =========================================================
          NAVIGATION
-         Fixed top bar with smooth-scroll anchor links.
     ========================================================== -->
     <nav>
         <div class="container nav-inner">
@@ -37,63 +33,104 @@
         </div>
     </nav>
 
-
     <!-- =========================================================
-         HERO
-         Full-width intro: name, title, specialty chips, and stats.
+         HERO / ABOUT
     ========================================================== -->
     <header>
         <div class="container">
-
             <div class="video-hero">
                 <video class="video-hero-media" autoplay muted loop playsinline poster="/sources/actual_pcb.png">
                     <source src="/sources/header_vid.mp4" type="video/mp4">
                 </video>
                 <div class="video-hero-overlay">
                     <h1 class="video-hero-name">Muhammad Mairaj</h1>
-                    <h1 class="video-hero-tag mono">Electrical &amp; Software Eng Portfolio</h1>
+                    <h2 class="video-hero-tag mono">Electrical &amp; Software Eng Portfolio</h2>
                 </div>
             </div>
  
-            <p class="hero-welcome">Thanks for checking out my portfolio! Whether you&rsquo;re a recruiter, fellow engineer, friend, or lost stranger, I hope you enjoy the ride.</p>
+            <p class="hero-welcome">Thanks for checking out my portfolio! Whether you’re a recruiter, fellow engineer, friend, or lost stranger, I hope you enjoy the ride.</p>
  
-            <h3 class="hero-facts-heading mono highlight">Some Fun Facts and Gentle Intro</h3>
+            <h3 class="hero-facts-heading mono highlight">Background</h3>
  
-            <div class="hero-facts-text">
-                <p>I started as a <span class="kw">Physics</span> undergrad. I liked <span class="kw">electromagnetism</span>, so I switched to <span class="kw">EE</span>. When I joined EE, I really liked <span class="kw">power engineering</span>, but a professor pointed me towards where power is actually heading, which pulled me towards <span class="kw">power electronics</span> and its control topologies &mdash; modern power systems lean more and more on <span class="kw">renewables</span>. Getting into power electronics got me <span class="kw">designing PCBs</span>, which pulled me into <span class="kw">embedded systems</span> and how useful they are across different fields. Since that needed programming and software knowledge, I started <span class="kw">learning to code</span> with online resources, and I still learn and code for fun on the side. Right now, after my internship at Hong Kong Electric, I'm learning  more about <span class="kw">data science and AI</span>.</p>
- 
-                <p>Outside of studies, I play <span class="kw">squash for PolyU</span> at the university level, and have somehow kept my <span class="kw">GPA above 3.7</span> through all of it. I was also awarded the <span class="kw">Hong Kong Talent Development Scholarship</span>.</p>
-                
-                <p> I'm a big YouTube nerd too &mdash; I love bingewatching techy videos, and some of my favourites are Phil's Lab, ElectrArc 240, Veritasium, ThePrimeagen, and Fern.</p>
+            <div class="journey-container">
+                <div class="journey-item">
+                    <div class="journey-content">
+                        <span class="journey-step">PHASE 01:</span>
+                        <p>I started as a <span class="kw">Physics</span> undergrad but I switched to <span class="kw">Electrical Engineering</span> cuz of my interest in  electricity, magnets, and waves.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-content">
+                        <span class="journey-step">PHASE 02:</span>
+                        <p>In EE I developed a strong interest in <span class="kw">power engineering</span>. In my third year I realized how essential the field of <span class="kw">power electronics</span> and control is for modern grids and I became obsessed with it.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-content">
+                        <span class="journey-step">PHASE 03:</span>
+                        <p>While I was taking power electronics course, I tried designing my very own DC-DC power converter which got me into <span class="kw">designing PCBs</span> as a side hobby.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-content">
+                        <span class="journey-step">PHASE 04:</span>
+                        <p>When designing PCBs, I continuously encountered things like microcontrollers, sensors, communications protocols, and more which naturally built my <span class="kw">embedded systems</span> skills. Since microcontrollers need to be programmed, I also started learning <span class="kw">programming</span>.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-content">
+                        <span class="journey-step">AS OF NOW:</span>
+                        <p>I recently finished my internship at Hong Kong Electric, where I was exposed to <span class="kw">Data Analysis and Machine Learning</span>. So now I am trying to hone my skills further in this field.</p>
+                    </div>
+                </div>
             </div>
 
- 
+            <h3 class="hero-facts-heading mono accent" style="margin-top: 3.5rem;">Cool Facts</h3>
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <i class="ri-trophy-line"></i>
+                    <h4>Varsity Athlete</h4>
+                    <p>Playing university-level squash for PolyU.</p>
+                </div>
+                <div class="fact-card">
+                    <i class="ri-bar-chart-2-line"></i>
+                    <h4>Dean's List</h4>
+                    <p>Awarded Dean's List and Head's List for my academic performance.</p>
+                </div>
+                <div class="fact-card">
+                    <i class="ri-medal-line"></i>
+                    <h4>HK Talent Scholarship</h4>
+                    <p>Received the Hong Kong Government Talent Development Scholarship.</p>
+                </div>
+                <div class="fact-card">
+                    <i class="ri-rocket-2-line"></i>
+                    <h4>Startup Founder</h4>
+                    <p>Co-founded a social media startup. Received PolyU & AWS funding, currently in HKSTP ideation.</p>
+                    <a href="https://www.instagram.com/its_kollab/" target="_blank" class="highlight" style="display: block; margin-top: 0.75rem;">
+                        @its_kollab
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
-
-
     <!-- =========================================================
          EDUCATION
-         Subsections: Degree + Coursework | Overseas Learning | Certifications
     ========================================================== -->
     <section id="education" class="section-pad">
         <div class="container">
             <div class="section-head">
-                <span class="line-num">//</span>
                 <span>Academic Profile</span>
             </div>
 
             <!-- Row 1: Degree card + Overseas Learning -->
-            <div class="grid-2" style="margin-bottom: 3rem;">
-
+            <div class="grid-2 mb-3">
                 <!-- Main Degree Card -->
                 <article class="card">
-                    <h3 style="margin-bottom: 0.5rem;">The Hong Kong Polytechnic University</h3>
-                    <div class="mono text-dim" style="margin-bottom: 1.5rem;">BEng (Hons) Electrical Engineering | 2023 - 2027</div>
+                    <h3 class="mb-0-5">The Hong Kong Polytechnic University</h3>
+                    <div class="mono text-dim mb-1-5">BEng (Hons) Electrical Engineering | 2023 - 2027</div>
 
-                    <h4 class="mono text-dim" style="margin-bottom: 1rem;">Some of my Favourite Courses</h4>
-                    <!-- Scrollable grade list; see components.css → .coursework-list -->
+                    <h4 class="mono text-dim mb-1">Some of my Favourite Courses</h4>
                     <div class="coursework-list">
                         <div class="grade-row"><span>Power Transmission &amp; Distribution</span>    <span class="grade-score excellent">A+</span></div>
                         <div class="grade-row"><span>Power Electronics &amp; Drives</span>           <span class="grade-score excellent">A+</span></div>
@@ -107,124 +144,108 @@
                 </article>
 
                 <!-- Overseas Learning -->
-                <article class="card" style="padding: 1.5rem;">
-                    <h4 style="margin-bottom: 1.5rem;">
+                <article class="card pad-1-5">
+                    <h4 class="mb-1-5">
                         <i class="ri-global-line highlight"></i> SIDE QUESTS
                     </h4>
-                    <div class="grid-2" style="gap: 1rem;">
-
+                    <div class="grid-2 gap-1">
                         <div class="module-card">
-                            <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-bank-line"></i> Cambridge</div>
+                            <div class="highlight"><i class="ri-bank-line"></i> Cambridge</div>
                             <p>Math &amp; AI</p>
-                            <div class="chip-group" style="justify-content: center; margin-bottom: 1rem;">
+                            <div class="chip-group justify-center mb-1">
                                 <div class="chip">Python</div>
                                 <div class="chip">Algorithms</div>
                             </div>
-                            <!-- Opens cert in a new tab -->
-                            <a href="/sources/cambridge_cert.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary);">
+                            <a href="/sources/cambridge_cert.pdf" target="_blank" class="chip chip-link">
                                 <i class="ri-external-link-line"></i> View Certificate
                             </a>
                         </div>
 
                         <div class="module-card">
-                            <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-building-4-line"></i> NUS Singapore</div>
+                            <div class="highlight"><i class="ri-building-4-line"></i> NUS Singapore</div>
                             <p>Engineering Entrepreneurship</p>
-                            <div class="chip-group" style="justify-content: center; margin-bottom: 1rem;">
+                            <div class="chip-group justify-center mb-1">
                                 <div class="chip">Pitching</div>
                                 <div class="chip">Problem Solving</div>
                             </div>
-                            <a href="/sources/NUS_cert.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary);">
+                            <a href="/sources/NUS_cert.pdf" target="_blank" class="chip chip-link">
                                 <i class="ri-external-link-line"></i> View Certificate
                             </a>
                         </div>
 
                         <div class="module-card">
-                            <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-building-4-line"></i> Schneider Electric</div>
+                            <div class="highlight"><i class="ri-building-4-line"></i> Schneider Electric</div>
                             <p>Sustainability</p>
-                            <div class="chip-group" style="justify-content: center; margin-bottom: 1rem;">
+                            <div class="chip-group justify-center mb-1">
                                 <div class="chip">Green Energy</div>
                                 <div class="chip">Electrification</div>
                             </div>
-                            <a href="/sources/Schneider_Electric.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary);">
+                            <a href="/sources/Schneider_Electric.pdf" target="_blank" class="chip chip-link">
                                 <i class="ri-external-link-line"></i> View Certificate
                             </a>
                         </div>
-
                     </div>
                 </article>
-
             </div>
 
-                        <!-- How I Learned to Code -->
+            <!-- How I Learned to Code -->
             <article class="card">
-                <h4 style="margin-bottom: 1.5rem;">
+                <h4 class="mb-1-5">
                     <i class="ri-terminal-box-line highlight"></i> How I Learnt Programming
                 </h4>
-                <div class="grid-3" style="gap: 1rem;">
- 
+                <div class="grid-3 gap-1">
                     <div class="module-card">
-                        <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-shapes-line"></i> CS50 Scratch</div>
+                        <div class="highlight"><i class="ri-shapes-line"></i> CS50 Scratch</div>
                         <p>Intro to Programming with Scratch</p>
-                        <a href="/sources/CS50_Scratch.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary); margin-top: 0.75rem;">
-                        <i class="ri-external-link-line"></i> View Certificate
+                        <a href="/sources/CS50_Scratch.pdf" target="_blank" class="chip chip-link">
+                            <i class="ri-external-link-line"></i> View Certificate
                         </a>
                     </div>
- 
                     <div class="module-card">
-                        <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-lightbulb-line"></i> CS50T</div>
+                        <div class="highlight"><i class="ri-lightbulb-line"></i> CS50T</div>
                         <p>Understanding Technology</p>
-                        <a href="/sources/CS50t.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary); margin-top: 0.75rem;">
+                        <a href="/sources/CS50t.pdf" target="_blank" class="chip chip-link">
                             <i class="ri-external-link-line"></i> View Certificate
                         </a>
                     </div>
- 
                     <div class="module-card">
-                        <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-code-box-line"></i> CS50x</div>
+                        <div class="highlight"><i class="ri-code-box-line"></i> CS50x</div>
                         <p>Introduction to Computer Science</p>
-                        <a href="/sources/CS50x.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary); margin-top: 0.75rem;">
+                        <a href="/sources/CS50x.pdf" target="_blank" class="chip chip-link">
                             <i class="ri-external-link-line"></i> View Certificate
                         </a>
                     </div>
- 
                     <div class="module-card">
-                        <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-code-s-slash-line"></i> CS50P</div>
+                        <div class="highlight"><i class="ri-code-s-slash-line"></i> CS50P</div>
                         <p>Programming with Python</p>
-                        <a href="/sources/CS50p.pdf" target="_blank" class="chip" style="justify-content: center; color: var(--primary); border-color: var(--primary); margin-top: 0.75rem;">
+                        <a href="/sources/CS50p.pdf" target="_blank" class="chip chip-link">
                             <i class="ri-external-link-line"></i> View Certificate
                         </a>
                     </div>
- 
                     <div class="module-card">
-                        <div class="highlight" style="margin-bottom: 0.5rem;"><i class="ri-book-open-line"></i> Algorithms</div>
+                        <div class="highlight"><i class="ri-book-open-line"></i> Algorithms</div>
                         <p>The Last Algorithms Course You'll Need &mdash; ThePrimeagen, Frontend Masters</p>
                     </div>
- 
                 </div>
             </article>
+        </div>
+    </section>
 
-     <!-- =========================================================
+    <!-- =========================================================
          EXPERIENCE
-         Full-width, 2-column card grid.
-         → Add/remove .card blocks as needed.
     ========================================================== -->
-
     <section id="experience" class="section-pad">
         <div class="container">
             <div class="section-head">
-                <span class="line-num">//</span>
                 <span>Work in Industry and Research</span>
             </div>
 
             <div class="grid-2">
-
-                <!-- Featured role: spans full 2-column width -->
+                <!-- Featured role -->
                 <article class="card featured-card">
                     <div class="role-badge">Power Systems</div>
-                    <h3>Engineer Intern</h3>
-                    <div class="mono text-dim" style="margin-bottom: 1.5rem;">
-                        Hong Kong Electric | Jul 2026 - Aug 2026
-                    </div>
-
+                    <h3>Engineering Intern</h3>
+                    <div class="mono text-dim mb-1-5">Hong Kong Electric | Jul 2026 - Aug 2026</div>
                     <div class="metrics-grid">
                         <div>
                             <span class="metric-big">Cable Health Diagnosis</span>
@@ -235,7 +256,6 @@
                             <span class="metric-desc">Developed ML based health indexing system</span>
                         </div>
                     </div>
-
                     <div class="chip-group">
                         <div class="chip">Technical Documentation</div>
                         <div class="chip">MS Power Apps</div>
@@ -245,13 +265,13 @@
                     </div>
                 </article>
 
-                <!-- UG Research Assistant -->
-                 <article class="card">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <!-- UG Research Assistant 1 -->
+                <article class="card">
+                    <div class="card-top-row">
                         <h4 class="highlight">UG Research Assistant</h4>
                         <span class="mono text-dim">2026</span>
                     </div>
-                    <div class="mono text-dim" style="margin-bottom: 1rem;">Research on PV Cells</div>
+                    <div class="card-subtitle">Research on PV Cells</div>
                     <div class="chip-group">
                         <div class="chip">PCB Design</div>
                         <div class="chip">Solidworks</div>
@@ -261,13 +281,13 @@
                     </div>
                 </article>
 
-                <!-- UG Research Assistant -->
+                <!-- UG Research Assistant 2 -->
                 <article class="card">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div class="card-top-row">
                         <h4 class="highlight">UG Research Assistant</h4>
                         <span class="mono text-dim">2026</span>
                     </div>
-                    <div class="mono text-dim" style="margin-bottom: 1rem;">PolyU Research Centre for EVs</div>
+                    <div class="card-subtitle">PolyU Research Centre for EVs</div>
                     <div class="chip-group">
                         <div class="chip">Wireless Power Transfer</div>
                         <div class="chip">Power Converters</div>
@@ -279,11 +299,11 @@
 
                 <!-- EE Trainee -->
                 <article class="card">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div class="card-top-row">
                         <h4 class="highlight">Electrical Engineering Trainee</h4>
                         <span class="mono text-dim">2025</span>
                     </div>
-                    <div class="mono text-dim" style="margin-bottom: 1rem;">PolyU Industrial Centre</div>
+                    <div class="card-subtitle">PolyU Industrial Centre</div>
                     <div class="chip-group">
                         <div class="chip">LV Distribution</div>
                         <div class="chip">Building Automation</div>
@@ -295,11 +315,11 @@
 
                 <!-- Design Intern -->
                 <article class="card">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div class="card-top-row">
                         <h4 class="highlight">HYR</h4>
                         <span class="mono text-dim">2025</span>
                     </div>
-                    <div class="mono text-dim" style="margin-bottom: 1rem;">Software &amp; Design Intern</div>
+                    <div class="card-subtitle">Software &amp; Design Intern</div>
                     <div class="chip-group">
                         <div class="chip">UI/UX Optimization</div>
                         <div class="chip">Efficiency +25%</div>
@@ -309,11 +329,11 @@
 
                 <!-- Software Intern -->
                 <article class="card">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div class="card-top-row">
                         <h4 class="highlight">Century Innovation Labs</h4>
                         <span class="mono text-dim">2024</span>
                     </div>
-                    <div class="mono text-dim" style="margin-bottom: 1rem;">Software Engineer Intern</div>
+                    <div class="card-subtitle">Software Engineer Intern</div>
                     <div class="chip-group">
                         <div class="chip">OpenAI API</div>
                         <div class="chip">JavaScript</div>
@@ -321,24 +341,20 @@
                         <div class="chip">Logic Implementation</div>
                     </div>
                 </article>
-
-            </div><!-- /grid-2 -->
+            </div>
         </div>
     </section>
 
-     <!-- =========================================================
+    <!-- =========================================================
          PROJECTS
-         Clickable cards linking to GitHub repos or demo videos.
     ========================================================== -->
     <section id="projects" class="section-pad">
         <div class="container">
             <div class="section-head">
-                <span class="line-num">//</span>
                 <span>Somethings Outside Class</span>
             </div>
 
             <div class="grid-3">
-
                 <a href="https://github.com/mairaj-02/Buck_Converter" target="_blank" class="project-card">
                     <img src="/sources/actual_pcb.png" alt="15W Buck Converter" class="p-img">
                     <div class="p-content">
@@ -347,7 +363,6 @@
                         <div class="spec-row"><span>KiCAD</span><span>LTSpice</span><span>PCB Design</span></div>
                     </div>
                 </a>
-
                 <a href="https://youtube.com/shorts/3ivqIc-HEKQ?feature=share" target="_blank" class="project-card">
                     <img src="/sources/Line_following_robot.png" alt="Analog Robot" class="p-img">
                     <div class="p-content">
@@ -356,7 +371,6 @@
                         <div class="spec-row"><span>LM393 Comparator</span><span>LDR Sensors</span><span>DC Motors</span></div>
                     </div>
                 </a>
-
                 <a href="https://drive.google.com/drive/folders/1sl5pnn2XzJJ7B6lYp_t9BOTHmSJblQsv?usp=sharing" target="_blank" class="project-card">
                     <img src="/sources/generator.png" alt="Generator" class="p-img">
                     <div class="p-content">
@@ -365,7 +379,6 @@
                         <div class="spec-row"><span>Arduino</span><span>INA219</span><span>Stator/Rotor</span></div>
                     </div>
                 </a>
-
                 <a href="https://github.com/mairaj-02/polyu-course-review" target="_blank" class="project-card">
                     <img src="/sources/polyu-gur.png" alt="GUR Platform" class="p-img">
                     <div class="p-content">
@@ -374,7 +387,6 @@
                         <div class="spec-row"><span>Flask</span><span>SQLite</span><span>Bootstrap 5</span></div>
                     </div>
                 </a>
-
                 <a href="https://youtu.be/W3DE77FCuYs" target="_blank" class="project-card">
                     <img src="/sources/job-tracker.png" alt="Job Tracker" class="p-img">
                     <div class="p-content">
@@ -383,7 +395,6 @@
                         <div class="spec-row"><span>Flask</span><span>JavaScript</span><span>Responsive UI</span></div>
                     </div>
                 </a>
-
                 <a href="https://www.youtube.com/watch?v=WoGf7QEE9P0&t=74s" target="_blank" class="project-card">
                     <img src="/sources/gonio.png" alt="Goniometer" class="p-img">
                     <div class="p-content">
@@ -392,27 +403,20 @@
                         <div class="spec-row"><span>PCB Design</span><span>Solidworks</span><span>BambooLab</span></div>
                     </div>
                 </a>
-
-            </div><!-- /grid-3 -->
+            </div>
         </div>
     </section>
 
     <!-- =========================================================
          VOLUNTEERING
-          Uses vol-card style
-         (left cyan border accent) in a 3-column grid.
-         → Add/remove .vol-card blocks as needed.
     ========================================================== -->
     <section id="volunteering" class="section-pad">
         <div class="container">
             <div class="section-head">
-                <span class="line-num">//</span>
-                <span>Uni Club and Societies</span>
+                <span>Uni Clubs and Societies</span>
             </div>
 
             <div class="grid-3">
-
-                <!-- EES PolyU -->
                 <article class="card vol-card">
                     <div class="vol-org">PolyU Engineering and Entreprenourship Society</div>
                     <div class="vol-role">Senior Member</div>
@@ -425,7 +429,6 @@
                     </div>
                 </article>
 
-                <!-- HCSG PolyU -->
                 <article class="card vol-card">
                     <div class="vol-org">Halls Community Service Group PolyU</div>
                     <div class="vol-role">Internal Vice President</div>
@@ -437,7 +440,6 @@
                     </div>
                 </article>
 
-                <!-- GDG PolyU -->
                 <article class="card vol-card">
                     <div class="vol-org">Google Developers Group PolyU</div>
                     <div class="vol-role">Technical Lead</div>
@@ -449,112 +451,117 @@
                         <div class="chip">Electronics</div>
                     </div>
                 </article>
-
-                <!-- Add more vol-card blocks here -->
-
             </div>
         </div>
     </section>
 
-
     <!-- =========================================================
          SKILLS
-         Grouped by domain; each group is a .skill-wrapper.
     ========================================================== -->
     <section id="skills" class="section-pad">
         <div class="container">
             <div class="section-head">
-                <span class="line-num">//</span>
                 <span>Technical Arsenal</span>
             </div>
 
-                <div class="skill-wrapper">
-                    <div class="skill-header"><i class="ri-flashlight-fill"></i><h3>Electrical Engineering</h3></div>
-                    <div class="skill-grid">
-                        <div class="skill-pill">Load Flow Studies</div>
-                        <div class="skill-pill">Fault Analysis</div>
-                        <div class="skill-pill">Transmission Line Modelling</div>
-                        <div class="skill-pill">Machine Design</div>
-                        <div class="skill-pill">Circuit Design &amp Analysis</div>
-                        <div class="skill-pill">System Modelling</div>
-                        <div class="skill-pill">Controller Design</div>
-                        <div class="skill-pill">Power Converter Design</div>
-                        <div class="skill-pill">Small Signal Analysis</div>
-                        <div class="skill-pill">Signal Processing</div>
-                        <div class="skill-pill">Filter Design</div>
-                        <div class="skill-pill">Electrical Building Services Design</div>
-                    </div>
+            <!-- 1. Power & Electronics -->
+            <div class="skill-wrapper">
+                <div class="skill-header"><i class="ri-flashlight-fill"></i><h3>Power Systems & Electronics</h3></div>
+                <div class="skill-grid">
+                    <div class="skill-pill">Circuit Design & Analysis</div>
+                    <div class="skill-pill">Load Flow Studies</div>
+                    <div class="skill-pill">Fault Analysis</div>
+                    <div class="skill-pill">Transmission Line Modelling</div>
+                    <div class="skill-pill">Power Converter Design</div>
+                    <div class="skill-pill">Electric Machine Design</div>
+                    <div class="skill-pill">Small Signal Analysis</div>
+                    <div class="skill-pill">Controller Design</div>
+                    <div class="skill-pill">Signal Processing</div>
+                    <div class="skill-pill">Filter Design</div>
+                    <div class="skill-pill">Building Services Design</div>
                 </div>
+            </div>
 
-                <div class="skill-wrapper">
-                    <div class="skill-header"><i class="ri-cpu-line"></i><h3>Embedded</h3></div>
-                    <div class="skill-grid">
-                        <div class="skill-pill">ESP32</div>
-                        <div class="skill-pill">Arduino</div>
-                        <div class="skill-pill">Raspberry Pi</div>
-                        <div class="skill-pill">STM32</div>
-                        <div class="skill-pill">PCB Design</div>
-                        <div class="skill-pill">C/C++</div>
-                    </div>
+            <!-- 2. Embedded & Hardware -->
+            <div class="skill-wrapper">
+                <div class="skill-header"><i class="ri-cpu-line"></i><h3>Embedded & Hardware</h3></div>
+                <div class="skill-grid">
+                    <div class="skill-pill">PCB Design</div>
+                    <div class="skill-pill">ESP32</div>
+                    <div class="skill-pill">STM32</div>
+                    <div class="skill-pill">Arduino</div>
+                    <div class="skill-pill">Raspberry Pi</div>
+                    <div class="skill-pill">C / C++</div>
                 </div>
+            </div>
 
-                <div class="skill-wrapper">
-                    <div class="skill-header"><i class="ri-code-s-slash-line"></i><h3>Languages &amp; Frameworks</h3></div>
-                    <div class="skill-grid">
-                        <div class="skill-pill">Python</div>
-                        <div class="skill-pill">Object Oriented Programming</div>
-                        <div class="skill-pill">Flask</div>
-                        <div class="skill-pill">Django</div>
-                        <div class="skill-pill">JavaScript</div>
-                        <div class="skill-pill">React.js</div>
-                        <div class="skill-pill">HTML &amp; CSS</div>
-                        <div class="skill-pill">Tailwind CSS</div>
-                        <div class="skill-pill">R</div>
-                        <div class="skill-pill">SQL</div>
-                        <div class="skill-pill">Git</div>
-                    </div>
+            <!-- 3. Software Development -->
+            <div class="skill-wrapper">
+                <div class="skill-header"><i class="ri-code-s-slash-line"></i><h3>Software Development</h3></div>
+                <div class="skill-grid">
+                    <div class="skill-pill">JavaScript</div>
+                    <div class="skill-pill">React.js</div>
+                    <div class="skill-pill">Flask</div>
+                    <div class="skill-pill">Django</div>
+                    <div class="skill-pill">HTML & CSS</div>
+                    <div class="skill-pill">Tailwind CSS</div>
+                    <div class="skill-pill">SQL</div>
+                    <div class="skill-pill">Git & GitHub</div>
                 </div>
+            </div>
 
-                <div class="skill-wrapper">
-                    <div class="skill-header"><i class="ri-tools-line"></i><h3>Engineering Tools</h3></div>
-                    <div class="skill-grid">
-                        <div class="skill-pill">PowerWorld Simulator</div>
-                        <div class="skill-pill">MATLAB</div>
-                        <div class="skill-pill">Simulink</div>
-                        <div class="skill-pill">KiCAD</div>
-                        <div class="skill-pill">Figma</div>
-                        <div class="skill-pill">Jupyter Notebook</div>
-                        <div class="skill-pill">AutoCAD</div>
-                        <div class="skill-pill">DiaLux EVO</div>
-                        <div class="skill-pill">SolidWorks</div>
-                        <div class="skill-pill">LTSpice</div>
-                        <div class="skill-pill">PSIM</div>
-                    </div>
+            <!-- 4. Data Science & AI -->
+            <div class="skill-wrapper">
+                <div class="skill-header"><i class="ri-bar-chart-2-line"></i><h3>Data Science & AI</h3></div>
+                <div class="skill-grid">
+                    <div class="skill-pill">Python</div>
+                    <div class="skill-pill">R</div>
+                    <div class="skill-pill">Descriptive Statistics</div>
+                    <div class="skill-pill">Exploratory Data Analysis</div>
+                    <div class="skill-pill">Data Wrangling</div>
+                    <div class="skill-pill">Data Visualization</div>
+                    <div class="skill-pill">Jupyter Notebook</div>
                 </div>
+            </div>
 
-                <div class="skill-wrapper">
-                    <div class="skill-header"><i class="ri-team-line"></i><h3>Soft Skills</h3></div>
-                    <div class="skill-grid">
-                        <div class="skill-pill">Problem Solving</div>
-                        <div class="skill-pill">Teamwork</div>
-                        <div class="skill-pill">Leadership</div>
-                        <div class="skill-pill">Adaptability</div>
-                        <div class="skill-pill">Time Management</div>
-                        <div class="skill-pill">Communication</div>
-                    </div>
+            <!-- 5. Simulation & CAD Tools -->
+            <div class="skill-wrapper">
+                <div class="skill-header"><i class="ri-tools-line"></i><h3>Simulation & CAD Tools</h3></div>
+                <div class="skill-grid">
+                    <div class="skill-pill">MATLAB & Simulink</div>
+                    <div class="skill-pill">LTSpice</div>
+                    <div class="skill-pill">PSIM</div>
+                    <div class="skill-pill">PowerWorld Simulator</div>
+                    <div class="skill-pill">KiCAD</div>
+                    <div class="skill-pill">SolidWorks</div>
+                    <div class="skill-pill">AutoCAD</div>
+                    <div class="skill-pill">DiaLux EVO</div>
+                    <div class="skill-pill">Figma</div>
                 </div>
+            </div>
+
+            <!-- 6. Leadership & Soft Skills -->
+            <div class="skill-wrapper">
+                <div class="skill-header"><i class="ri-team-line"></i><h3>Leadership & Soft Skills</h3></div>
+                <div class="skill-grid">
+                    <div class="skill-pill">Technical Leadership</div>
+                    <div class="skill-pill">Event Management</div>
+                    <div class="skill-pill">Cross-functional Communication</div>
+                    <div class="skill-pill">Problem Solving</div>
+                    <div class="skill-pill">Adaptability</div>
+                    <div class="skill-pill">Time Management</div>
+                </div>
+            </div>
 
         </div>
     </section>
 
-
     <!-- =========================================================
          FOOTER
-         Contact links + CV button (opens in new tab).
     ========================================================== -->
     <footer>
         <div class="container">
-            <div class="mono highlight">// CONTACT</div>
+            <div class="mono highlight">CONTACT</div>
             <h2 style="margin: 1rem 0;">Let's Connect</h2>
 
             <div class="footer-links">
