@@ -2,16 +2,14 @@
    BASE.CSS — Design Tokens, Reset, Typography, Global Utilities
    ============================================================= */
 
-/* --- DESIGN TOKENS (CSS Custom Properties) ---
-   Single source of truth for all colors, fonts, and spacing.
-   Change a value here and it updates everywhere. */
+/* --- DESIGN TOKENS --- */
 :root {
-    --bg-dark:        #050505;         /* Page background */
-    --bg-panel:       #111111;         /* Card/panel background */
-    --bg-panel-light: #1a1a1a;         /* Slightly lighter panel */
-    --primary:        #00f0ff;         /* Electric cyan – main accent */
+    --bg-dark:        #050505;
+    --bg-panel:       #111111;
+    --bg-panel-light: #1a1a1a;
+    --primary:        #00f0ff;
     --primary-dim:    rgba(0, 240, 255, 0.1);
-    --secondary:      #ffae00;         /* Safety amber – secondary accent */
+    --secondary:      #ffae00;
     --text-main:      #ffffff;
     --text-dim:       #888888;
     --border:         #333333;
@@ -22,8 +20,6 @@
 
 /* --- RESET --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
-/* Prevent horizontal scrollbar on all viewports */
 html, body { overflow-x: hidden; width: 100%; }
 
 body {
@@ -31,8 +27,6 @@ body {
     color: var(--text-main);
     font-family: var(--font-head);
     line-height: 1.5;
-
-    /* Subtle schematic-grid texture via repeating CSS gradients */
     background-image:
         linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
@@ -45,101 +39,32 @@ ul { list-style: none; }
 
 /* --- TYPOGRAPHY UTILITIES --- */
 h1, h2, h3 { font-weight: 700; text-transform: uppercase; letter-spacing: -0.5px; }
-
 .mono      { font-family: var(--font-mono); font-size: 0.85rem; }
 .highlight { color: var(--primary); }
 .accent    { color: var(--secondary); }
 .text-dim  { color: var(--text-dim); }
 
-/* --- LAYOUT UTILITIES --- */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    width: 100%;
-}
+/* --- LAYOUT & SPACING UTILITIES --- */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; width: 100%; }
 
-/* Reusable grid configurations */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr;          gap: var(--gap); }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr);   gap: var(--gap); }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr);   gap: var(--gap); }
 
-/* Standard section wrapper: vertical padding + bottom divider */
 .section-pad { padding: 4rem 0; border-bottom: 1px solid var(--border); }
 
-/* Section heading line: "// Title" pattern */
 .section-head {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    font-family: var(--font-mono);
+    display: flex; align-items: baseline; gap: 1rem;
+    margin-bottom: 2rem; font-size: 1.5rem; font-family: var(--font-mono);
 }
 .line-num { color: var(--text-dim); font-size: 0.9rem; }
 
-        .video-hero {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 8;
-            max-height: 560px;
-            overflow: hidden;
-            border-radius: 4px;
-        }
-        .video-hero-media {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .video-hero-overlay {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 2rem;
-            background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.75) 100%);
-        }
-        .video-hero-name {
-            color: #fff;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            line-height: 1.05;
-            margin: 0;
-        }
-        .video-hero-tag {
-            color: rgba(255,255,255,0.85);
-            margin-top: 0.5rem;
-        }
-        .hero-welcome {
-            max-width: 60ch;
-            margin: 1.75rem auto 0;
-            text-align: center;
-            font-size: 1.05rem;
-        }
-        .hero-facts-heading {
-            text-align: center;
-            font-size: clamp(1.4rem, 2.6vw, 2rem);
-            margin: 2.5rem auto 1rem;
-            max-width: 900px;
-        }
-        .hero-facts-text {
-            max-width: 780px;
-            margin: 0 auto;
-            font-size: 1.05rem;
-            line-height: 1.75;
-        }
-        .hero-facts-text p + p {
-            margin-top: 1rem;
-        }
-        .kw {
-            color: var(--primary, #00d9ff);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            font-weight: 500;
-        }
-        @media (max-width: 640px) {
-            .hero-facts { grid-template-columns: 1fr; }
-        }
-
+/* Spacing Helpers (Replaces inline styles) */
+.mb-0-5 { margin-bottom: 0.5rem; }
+.mb-1   { margin-bottom: 1rem; }
+.mb-1-5 { margin-bottom: 1.5rem; }
+.mb-2   { margin-bottom: 2rem; }
+.mb-3   { margin-bottom: 3rem; }
+.gap-1  { gap: 1rem; }
+.pad-1-5 { padding: 1.5rem; }
+.justify-center { justify-content: center; }
